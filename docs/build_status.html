@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Quick Start | Status</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://dev-docs.status.im/docs/build_status.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://dev-docs.status.im/docs/build_status.html">
+    
+  
+  <!-- Icon -->
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <link rel="icon" type="image/png" href="/img/logo-16.png?v=0.0.5" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/img/logo-32.png?v=0.0.5" sizes="32x32" />
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76.png?v=0.0.5">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120.png?v=0.0.5">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152.png?v=0.0.5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180.png?v=0.0.5">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon-1024.png?v=0.0.5">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Status">
+  <meta property="og:image" content="/img/share.png?v=0.0.5" />
+</head>
+
+<body>
+  <div id="container">
+    
+      <header id="header" class="wrapper">
+    <div id="header-inner" class="inner">
+        <h1 id="logo-wrap">
+            <a href="/" id="logo"></a>
+        </h1>
+        <nav id="main-nav">
+            <a href="/docs/build_status.html" class="main-nav-link">Build Status</a>
+            <a href="/tutorials/" class="main-nav-link">Tutorials</a>
+            <a href="/extensions/" class="main-nav-link">Extensions</a>
+        </nav>
+
+        <div class="secondary-nav">
+            <div id="search-input-wrap" class="standalone">
+                <div id="search-input-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+                <input type="search" id="search-input" placeholder="Search...">
+            </div>
+
+            <div class="second-nav-links">
+                <span><a href="https://get.status.im/chat/public/developers" class="main-nav-link">Developers Chat</a></span>
+                <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
+            </div>
+        </div>
+
+        <a id="mobile-nav-toggle">
+            <span class="mobile-nav-toggle-bar"></span>
+            <span class="mobile-nav-toggle-bar"></span>
+            <span class="mobile-nav-toggle-bar"></span>
+        </a>
+    </div>
+</header>
+
+    
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Quick Start</h1>
+                <a href="https://github.com/status-im/docs.status.im/edit/develop/source/docs/build_status.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="The-easiest-way" class="article-heading"><a href="#The-easiest-way" class="headerlink" title="The easiest way"></a>The easiest way<a class="article-anchor" href="#The-easiest-way" aria-hidden="true"></a></h2><h3 id="1-Clone-the-repository" class="article-heading"><a href="#1-Clone-the-repository" class="headerlink" title="1. Clone the repository"></a>1. Clone the repository<a class="article-anchor" href="#1-Clone-the-repository" aria-hidden="true"></a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/status-im/status-react</span><br><span class="line">cd status-react</span><br></pre></td></tr></table></figure>
+<h3 id="2-Install-the-dependencies" class="article-heading"><a href="#2-Install-the-dependencies" class="headerlink" title="2. Install the dependencies"></a>2. Install the dependencies<a class="article-anchor" href="#2-Install-the-dependencies" aria-hidden="true"></a></h3><p>We created a special script that installs everything Status needs. However, this script works only<br>for macOS and Ubuntu Linux. If you use another Linux distribution, please, install all dependencies manually (you can find the list below).</p>
+<p>It’s also better to make sure that you have <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">Node Version Manager</a> installed before running this script.<br>The reason is simple — NVM provides much more flexibility and allows to have several NPM versions installed.</p>
+<p>Just run this to install all dependencies:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make setup</span><br></pre></td></tr></table></figure>
+<p>This script prepares and installs the following:</p>
+<ul>
+<li>Homebrew</li>
+<li>Java 8 (from Homebrew on Mac and from <code>ppa:webupd8team/java</code> on Ubuntu)</li>
+<li>Clojure and Leiningen</li>
+<li>Node.js (see note below)</li>
+<li>React Native CLI and Watchman</li>
+<li>Android SDK </li>
+<li>Android NDK r10e (under <code>~/Android/Sdk/</code>)</li>
+<li>Maven</li>
+<li>Cocoapods</li>
+</ul>
+<p><em>Note 1:</em> it can take up to 20 minutes depending on your machine and internet connection speed.</p>
+<p><em>Note 2:</em> If you don’t have <code>nvm</code>, <code>node@8</code> will be installed from Homebrew.<br>If you don’t have <code>nvm</code> AND already have <code>node</code> installed on your machine then nothing will happen.<br>Type <code>npm version</code> and make sure you don’t use Node.js v10 because it’s not supported by Realm.js (see <strong>Troubleshooting</strong> section for additional details).</p>
+<h2 id="Running-development-processes" class="article-heading"><a href="#Running-development-processes" class="headerlink" title="Running development processes"></a>Running development processes<a class="article-anchor" href="#Running-development-processes" aria-hidden="true"></a></h2><p>After you installed all the dependencies, you need to run two processes — the build process and React Native packager. Keep both processes running when you develop Status.</p>
+<h3 id="1-Build-process" class="article-heading"><a href="#1-Build-process" class="headerlink" title="1. Build process"></a>1. Build process<a class="article-anchor" href="#1-Build-process" aria-hidden="true"></a></h3><p>Just run <strong>one of these commands</strong> in the first terminal window:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make startdev-ios-simulator</span><br><span class="line">make startdev-ios-real</span><br><span class="line">make startdev-android-avd</span><br><span class="line">make startdev-android-genymotion</span><br><span class="line">make startdev-android-real</span><br></pre></td></tr></table></figure>
+<p>By doing this you will start the compilation of ClojureScript sources and run re-frisk (a tool for debugging).</p>
+<p>For additional information check the following:</p>
+<ul>
+<li><a href="https://github.com/status-im/clj-rn" target="_blank" rel="noopener">clj-rn</a>;</li>
+<li><a href="https://github.com/flexsurfer/re-frisk" target="_blank" rel="noopener">re-frisk</a>.</li>
+</ul>
+<h3 id="2-React-Native-packager" class="article-heading"><a href="#2-React-Native-packager" class="headerlink" title="2. React Native packager"></a>2. React Native packager<a class="article-anchor" href="#2-React-Native-packager" aria-hidden="true"></a></h3><p>Do this in the second terminal window:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">react-native start</span><br></pre></td></tr></table></figure>
+<h2 id="Build-and-run-the-application-itself" class="article-heading"><a href="#Build-and-run-the-application-itself" class="headerlink" title="Build and run the application itself"></a>Build and run the application itself<a class="article-anchor" href="#Build-and-run-the-application-itself" aria-hidden="true"></a></h2><h3 id="iOS-macOS-only" class="article-heading"><a href="#iOS-macOS-only" class="headerlink" title="iOS (macOS only)"></a>iOS (macOS only)<a class="article-anchor" href="#iOS-macOS-only" aria-hidden="true"></a></h3><p>Just execute<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">react-native run-ios</span><br></pre></td></tr></table></figure></p>
+<p>If you wish to specify the simulator, just run <code>react-native run-ios --simulator=&quot;iPhone 7&quot;</code>.<br>You can check your available devices by running <code>xcrun simctl list devices</code> from the console.</p>
+<p>You can also start XCode and run the application there. Execute <code>open ios/StatusIm.xcworkspace</code>, select a device/simulator and click <strong>Run</strong>.</p>
+<p><em>Note:</em> Of course, you need to install XCode first in both cases. Just go to Mac AppStore to do this.</p>
+<h3 id="Android" class="article-heading"><a href="#Android" class="headerlink" title="Android"></a>Android<a class="article-anchor" href="#Android" aria-hidden="true"></a></h3><p>Installation script installs Android NDK, but you still need to install Android SDK manually to build and run Status on Android.</p>
+<p>The easiest way to do this is to install Android Studio — it will install almost everything for you.<br>There is a difficult way for those who don’t want/need Android Studio.</p>
+<p>In this case you have to do the following:</p>
+<ul>
+<li>Install Android SDK from you package manager (<code>brew install android-sdk</code>, <code>sudo apt-get install android-sdk</code>, …) or download it manually <a href="https://developer.android.com/studio/#downloads" target="_blank" rel="noopener">here</a>;</li>
+<li>Add several env variables to your profile (.bashrc, .zshrc, …) — installer should say what are these variables and their values;</li>
+<li>Run <code>android update sdk --no-ui</code> to update SDKs;</li>
+<li>Run <code>sdkmanager</code> from your machine and install the latest Android SDKs;</li>
+<li><em>Optional:</em> If you want to use AVD (Android Virtual Device, emulator), please, check <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener">this documentation</a>;</li>
+<li><em>Optional:</em> If you don’t like AVD, you can also use <a href="https://genymotion.com" target="_blank" rel="noopener">Genymotion</a>;</li>
+<li>Execute <code>react-native run-android</code>.</li>
+</ul>
+<p>Errors like <code>android-sdk-16 not found</code> usually mean that you simply need to install missing SDKs. Run <code>sdkmanager</code> for that.</p>
+<p>Check the following docs if you still have problems:</p>
+<ul>
+<li><a href="https://gist.github.com/patrickhammond/4ddbe49a67e5eb1b9c03" target="_blank" rel="noopener">macOS</a>;</li>
+<li><a href="https://gist.github.com/zhy0/66d4c5eb3bcfca54be2a0018c3058931" target="_blank" rel="noopener">Ubuntu Linux</a>;</li>
+<li><a href="https://wiki.archlinux.org/index.php/android" target="_blank" rel="noopener">Arch Linux</a> (can also be useful for other Linux distributions).</li>
+</ul>
+<h2 id="Optional-Advanced-build-notes" class="article-heading"><a href="#Optional-Advanced-build-notes" class="headerlink" title="Optional: Advanced build notes"></a>Optional: Advanced build notes<a class="article-anchor" href="#Optional-Advanced-build-notes" aria-hidden="true"></a></h2><h3 id="Node-js" class="article-heading"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js<a class="article-anchor" href="#Node-js" aria-hidden="true"></a></h3><p>There are several ways of installing Node.js on your machine.<br>One of the most convenient and easy is by using <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">Node Version Manager (nvm)</a>. However, our setup script installs <code>node</code> from Homebrew if <code>nvm</code> is not installed on your machine.</p>
+<p>That’s why we suggest to install <code>nvm</code> first if you want to have more flexible development environment.</p>
+<p>If <code>nvm</code> is already installed, <code>make setup</code> simply does the following:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nvm install 9</span><br><span class="line">nvm alias status-im 9</span><br><span class="line">nvm use status-im</span><br></pre></td></tr></table></figure></p>
+<h3 id="Custom-Android-SDK-location" class="article-heading"><a href="#Custom-Android-SDK-location" class="headerlink" title="Custom Android SDK location"></a>Custom Android SDK location<a class="article-anchor" href="#Custom-Android-SDK-location" aria-hidden="true"></a></h3><p>Some of developers prefer to use Android SDK integrated to Android Studio. Of course, it doesn’t matter<br>for the build process — just make sure that <code>ANDROID_SDK_ROOT</code> points to a right location and you have all the SDKs installed.</p>
+<h2 id="Troubleshooting" class="article-heading"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting<a class="article-anchor" href="#Troubleshooting" aria-hidden="true"></a></h2><h3 id="I-see-lots-of-yarn-errors-while-installing-Realm-js" class="article-heading"><a href="#I-see-lots-of-yarn-errors-while-installing-Realm-js" class="headerlink" title="I see lots of yarn errors while installing Realm.js!"></a>I see lots of yarn errors while installing Realm.js!<a class="article-anchor" href="#I-see-lots-of-yarn-errors-while-installing-Realm-js" aria-hidden="true"></a></h3><p>Unfortunately, Realm doesn’t support Node.js v10. Which means that you need to use Node &lt; 10 to build Status.<br>One of the best ways to install any older version of Node.js is to use <code>nvm</code>.</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-09-26T19:44:50.653Z" itemprop="dateModified">Last updated: 2018-09-26</time>
+                <a href="FAQs.html" class="article-footer-prev" title="FAQs"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="build_status_go.html" class="article-footer-next" title="Building Status-Go"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-easiest-way"><span class="toc-text">The easiest way</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Clone-the-repository"><span class="toc-text">1. Clone the repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Install-the-dependencies"><span class="toc-text">2. Install the dependencies</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Running-development-processes"><span class="toc-text">Running development processes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Build-process"><span class="toc-text">1. Build process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-React-Native-packager"><span class="toc-text">2. React Native packager</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Build-and-run-the-application-itself"><span class="toc-text">Build and run the application itself</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#iOS-macOS-only"><span class="toc-text">iOS (macOS only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android"><span class="toc-text">Android</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Optional-Advanced-build-notes"><span class="toc-text">Optional: Advanced build notes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js"><span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-Android-SDK-location"><span class="toc-text">Custom Android SDK location</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Troubleshooting"><span class="toc-text">Troubleshooting</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#I-see-lots-of-yarn-errors-while-installing-Realm-js"><span class="toc-text">I see lots of yarn errors while installing Realm.js!</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Use Status</strong><a href="introduction.html" class="sidebar-link">Who We Are</a><a href="userguide.html" class="sidebar-link">User Guide</a><a href="contributor_guide.html" class="sidebar-link">Contributor Guide</a><a href="ens_usernames.html" class="sidebar-link">ENS Usernames</a><a href="FAQs.html" class="sidebar-link">FAQs</a><strong class="sidebar-title">Build Status</strong><a href="build_status.html" class="sidebar-link current">Building Status</a><a href="build_status_go.html" class="sidebar-link">Building Status-Go</a><a href="status_react_structure.html" class="sidebar-link">Status-React Structure</a><a href="send_transaction_flow.html" class="sidebar-link">Send Transaction Flow</a><strong class="sidebar-title">Build Status Desktop</strong><a href="intro_desktop.html" class="sidebar-link">Getting Started</a><a href="build_desktop.html" class="sidebar-link">Building Desktop</a><a href="build_desktop_troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="build_desktop_google_breakpad.html" class="sidebar-link">Using Breakpad</a><a href="build_desktop_jenkins.html" class="sidebar-link">Using Jenkins</a><strong class="sidebar-title">Status Extensions</strong><a href="add_your_dapp.html" class="sidebar-link">Add Your DApp to Status</a><a href="status_web_api.html" class="sidebar-link">JS API</a><a href="http-debugging.html" class="sidebar-link">Debugging</a><a href="intro_dapps.html" class="sidebar-link">Manifesto</a><a href="extensions_spec.html" class="sidebar-link">Extensions Technical Spec</a><a href="embark.html" class="sidebar-link">Embark</a><a href="status_optimized.html" class="sidebar-link">Optimised for Status</a><strong class="sidebar-title">Research</strong><a href="nimbus.html" class="sidebar-link">Nimbus</a><strong class="sidebar-title">Testing</strong><a href="testing.html" class="sidebar-link">How We Test</a><a href="report_a_bug.html" class="sidebar-link">Report a Bug</a><strong class="sidebar-title">Security</strong><a href="security_champions.html" class="sidebar-link">Security Champions</a><a href="security_existing_features.html" class="sidebar-link">Existing Features</a><a href="security_experiment.html" class="sidebar-link">Security Experiment</a><a href="security_process.html" class="sidebar-link">Our Process</a><a href="security_threat_modeling.html" class="sidebar-link">Threat Modeling</a><a href="security_github_labels.html" class="sidebar-link">Github Labels</a><a href="security_sensitive_data.html" class="sidebar-link">Sensitive Data</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <div class="pre-footer">
+    <div class="pre-footer-inner">
+        <div class="community">
+            <div class="community-item">
+                <h3>We’re All Open Source</h3>
+                <p>Check out the source code on GitHub and contribute</p>
+                <a href="https://github.com/status-im" class="button" target="_blank">Github</a>
+            </div>
+            <div class="community-item">
+                <h3>We’re here to help</h3>
+                <p>Contact us for support and join in on the conversation in Status itself</p>
+                <a href="https://get.status.im/chat/public/developers" class="button">Join Chat</a>
+            </div>
+        </div>
+        <div class="mail">
+            <div class="mail-inner">
+                <h3>Download Status</h3>
+                <p>If you have an Android, you can easily get Status <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" target="_blank" class="download">here</a>. You can also download our nightlies and desktop builds <a  href="https://status-im.github.io/nightly/" target="_blank" class="download">here</a>.</p>
+                <p>If you're on iOS, you'll need to use <a href="https://testflight.apple.com/join/J8EuJmey" target="_blank" class="download">this form</a> to sign up easily and get TestFlight while we're still in Beta.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-logo-wrap">
+            <div class="footer-logo-wrap__inner">
+                <a class="footer-logo" href="https://status.im" target="_blank"></a>
+                <div class="footer-address">Status Research & Development GmbH<br/>Baarerstrasse 10<br/>Zug, Switzerland
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/docs/" class="mobile-nav-link">Docs</a><a href="/tutorials/" class="mobile-nav-link">Tutorials</a><a href="/plugins/" class="mobile-nav-link">Plugins</a><a href="/chat/" class="mobile-nav-link">Chat</a><a href="/news/" class="mobile-nav-link">Blog</a><a href="/wip/" class="mobile-nav-link">menu.wip</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/staus-im" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">Use Status</strong><a href="introduction.html" class="mobile-nav-link">Who We Are</a><a href="userguide.html" class="mobile-nav-link">User Guide</a><a href="contributor_guide.html" class="mobile-nav-link">Contributor Guide</a><a href="ens_usernames.html" class="mobile-nav-link">ENS Usernames</a><a href="FAQs.html" class="mobile-nav-link">FAQs</a><strong class="mobile-nav-title">Build Status</strong><a href="build_status.html" class="mobile-nav-link current">Building Status</a><a href="build_status_go.html" class="mobile-nav-link">Building Status-Go</a><a href="status_react_structure.html" class="mobile-nav-link">Status-React Structure</a><a href="send_transaction_flow.html" class="mobile-nav-link">Send Transaction Flow</a><strong class="mobile-nav-title">Build Status Desktop</strong><a href="intro_desktop.html" class="mobile-nav-link">Getting Started</a><a href="build_desktop.html" class="mobile-nav-link">Building Desktop</a><a href="build_desktop_troubleshooting.html" class="mobile-nav-link">Troubleshooting</a><a href="build_desktop_google_breakpad.html" class="mobile-nav-link">Using Breakpad</a><a href="build_desktop_jenkins.html" class="mobile-nav-link">Using Jenkins</a><strong class="mobile-nav-title">Status Extensions</strong><a href="add_your_dapp.html" class="mobile-nav-link">Add Your DApp to Status</a><a href="status_web_api.html" class="mobile-nav-link">JS API</a><a href="http-debugging.html" class="mobile-nav-link">Debugging</a><a href="intro_dapps.html" class="mobile-nav-link">Manifesto</a><a href="extensions_spec.html" class="mobile-nav-link">Extensions Technical Spec</a><a href="embark.html" class="mobile-nav-link">Embark</a><a href="status_optimized.html" class="mobile-nav-link">Optimised for Status</a><strong class="mobile-nav-title">Research</strong><a href="nimbus.html" class="mobile-nav-link">Nimbus</a><strong class="mobile-nav-title">Testing</strong><a href="testing.html" class="mobile-nav-link">How We Test</a><a href="report_a_bug.html" class="mobile-nav-link">Report a Bug</a><strong class="mobile-nav-title">Security</strong><a href="security_champions.html" class="mobile-nav-link">Security Champions</a><a href="security_existing_features.html" class="mobile-nav-link">Existing Features</a><a href="security_experiment.html" class="mobile-nav-link">Security Experiment</a><a href="security_process.html" class="mobile-nav-link">Our Process</a><a href="security_threat_modeling.html" class="mobile-nav-link">Threat Modeling</a><a href="security_github_labels.html" class="mobile-nav-link">Github Labels</a><a href="security_sensitive_data.html" class="mobile-nav-link">Sensitive Data</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/build_status.html">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/bundle.js?v=0.0.1"></script>
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/search.js"></script>
+<!-- endbuild -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script async src="/js/highlight.pack.js"></script>
+<script async src="/js/solidity.js"></script>
+<script>
+
+function highlight() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+}
+
+$(document).ready(function() {
+  try {
+    highlight();
+  } catch(err) {
+    console.log("retrying...")
+    setTimeout(function() {
+      highlight();
+    }, 2500)
+  }
+
+  var clipboard = new ClipboardJS(".btn");
+  clipboard.on('success', function(e) {
+    var id = $(e.trigger).attr("data-clipboard-target");
+    $(id).toggleClass("flash");
+    setTimeout(function() {
+      $(id).toggleClass("flash");
+    }, 200);
+    e.clearSelection();
+  })
+});
+
+</script>
+<style>
+  mark {
+    background: #232323;
+    color: white;
+    font-weight: bold;
+
+    -webkit-transition: background 0.1s ease-in-out;
+    -ms-transition:     background 0.1s ease-in-out;
+    transition:         background 0.1s ease-in-out;
+  }
+
+  .clippy {
+    margin-top: -3px;
+    position: relative;
+    top: 3px;
+  }
+
+  pre {
+    position: relative;
+  }
+
+  .btn {
+    transition: opacity .3s ease-in-out;
+    padding: 2px 6px;
+    position: absolute;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc,#eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-appearance: none;
+    top: 34px;
+    right: 12px;
+  }
+
+  .flash {
+    background-color: grey;
+  }
+
+</style>
+<!-- Algolia -->
+
+
+</body>
+</html>
