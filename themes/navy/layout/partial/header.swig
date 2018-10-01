@@ -1,8 +1,9 @@
 <header id="header" class="wrapper">
     <div id="header-inner" class="inner">
-        <h1 id="logo-wrap">
-            <a href="{{ url_for_lang('') }}" id="logo"></a>
-        </h1>
+        <div id="logo-wrap-page">
+            <span class="logo-span"><a href="{{ url_for_lang('') }}" id="logo"></a></span>
+            <span class="logo-span"><a class="logo-text" href="/">status</a></span>
+        </div>
         <header class="dropdown">
             <nav>
                 <ul>
