@@ -1,5 +1,5 @@
 ---
-id: introduction
+id: index
 title: Welcome to Status
 ---
 

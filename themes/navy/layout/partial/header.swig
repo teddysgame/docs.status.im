@@ -2,17 +2,16 @@
     <div id="header-inner" class="inner">
         <div id="logo-wrap-page">
             <span class="logo-span"><a href="{{ url_for_lang('') }}" id="logo"></a></span>
-            <span class="logo-span"><a class="logo-text" href="/">status</a></span>
         </div>
         <header class="dropdown">
             <nav>
                 <ul>
-                <li><a href="#">Status App</a>
+                <li class="current"><a href="#">Status App</a>
                     <ul>
-                        <li><a href="https://status/im">About</a></li>
+                        <li><a href="https://status.im">About</a></li>
                         <li><a href="https://status.im">Features</a></li>
                         <li><a href="https://status.im">Desktop</a></li>
-                        <li><a href="https://docs.status/im">Docs</a></li>
+                        <li><a href="/docs/">Docs</a></li>
                         <li><a href="https://our.status/im">Blog</a></li>
                         <li><a href="https://people-ops.status.im/">Contribute</a></li>
                     </ul>
@@ -31,7 +30,7 @@
 
                 <li><a href="https://status.im/incubate">Incubate</a></li>
 
-                <li class="current"><a href="/">Nimbus</a>
+                <li><a href="/">Nimbus</a>
                     <ul>
                     <li><a href="#">About</a></li>
                     <li><a href="/docs/">Docs</a></li>
@@ -57,8 +56,6 @@
 
             <div class="second-nav-links">
                 <span><a href="http://get.status.im/chat/public/status" class="button button--secondary button--header">Status Chat</a></span>
-                <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
-                <span class="social-link social-link--gitter"><a href="https://gitter.im/status-im/nimbus" target="_blank"></a></span>
             </div>
         </div>
 

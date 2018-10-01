@@ -1,6 +1,6 @@
 docs:
   use_status:
-    who_we_are: introduction.html
+    who_we_are: index.html
     user_guide: userguide.html
     contributor_guide: contributor_guide.html
     ens_usernames: ens_usernames.html

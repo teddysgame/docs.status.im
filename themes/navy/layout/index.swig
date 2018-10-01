@@ -11,11 +11,11 @@
                     <ul>
                     <li class="current"><a href="#">Status App</a>
                         <ul>
-                            <li><a href="https://status/im">About</a></li>
+                            <li><a href="https://status.im">About</a></li>
                             <li><a href="https://status.im">Features</a></li>
                             <li><a href="https://status.im">Desktop</a></li>
-                            <li><a href="https://docs.status/im">Docs</a></li>
-                            <li><a href="https://our.status/im">Blog</a></li>
+                            <li><a href="/docs/">Docs</a></li>
+                            <li><a href="https://our.status.im">Blog</a></li>
                             <li><a href="https://people-ops.status.im/">ecosystem</a></li>
                         </ul>
                     </li>
@@ -107,39 +107,39 @@
 
         <div class="ecosystem-wrap">
             <div class="ecosystem">
-                <h2>Status App</h2>
+                <h2 class="app">Status App</h2>
                 <p>Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects and contributors fostering a rich distributed web.</p>
-                <p><a href="https://github.com/">Learn More</a>
+                <p><a class="app" href="https://github.com/">Learn More</a>
                 <span><a href="https://github.com/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
-                <h2>Status Incubate</h2>
+                <h2 class="incubate">Status Incubate</h2>
                 <p>Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects</p>
-                <p><a href="https://github.com/">Learn more</a>
+                <p><a class="incubate" href="https://github.com/">Learn more</a>
                 <span><a href="https://github.com/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
-                <h2>Embark</h2>
+                <h2 class="embark">Embark</h2>
                 <p>Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects and contributors fostering a rich distributed web.</p>
-                <p><a href="https://github.com/">Learn more</a>
+                <p><a class="embark" href="https://github.com/">Learn more</a>
                 <span><a href="https://github.com/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
-                <h2>Status Studio</h2>
+                <h2 class="studio">Status Studio</h2>
                 <p>Engineer</p>
-                <p><a href="https://github.com/">Learn more</a>
+                <p><a class="studio" href="https://github.com/">Learn more</a>
                 <span><a href="https://github.com/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
-                <h2>Nimbus</h2>
+                <h2 class="nimbus">Nimbus</h2>
                 <p>Engineer</p>
-                <p><a href="https://github.com/">Learn more</a>
+                <p><a class="nimbus" href="https://github.com/">Learn more</a>
                 <span><a href="https://github.com/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
-                <h2>Status Hardwallet</h2>
+                <h2 class="hardwallet">Status Hardwallet</h2>
                 <p>Engineer</p>
-                <p><a href="https://github.com/">Learn more</a>
+                <p><a class="hardwallet" href="https://github.com/">Learn more</a>
                 <span><a href="https://github.com/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
         </div>
