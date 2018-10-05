@@ -14,7 +14,7 @@
     
   
   <!-- Icon -->
-  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileColor" content="#ff9c00">
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
 
   <link rel="icon" type="image/png" href="/img/logo-16.png?v=0.0.5" sizes="16x16" />
@@ -34,58 +34,129 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Status">
-  <meta property="og:image" content="/img/share.png" />
-  <meta property="og:title" content="Status, a Mobile Ethereum OS" />
+  <meta property="og:image" content="/img/graphic-licensing.png" />
+  <meta property="og:title" content="Nimbus, a Light Client for Ethereum 2.0" />
 </head>
 
 <body>
   <div id="container">
     
-      <header id="header" class="wrapper">
-    <div id="header-inner" class="inner">
-        <h1 id="logo-wrap">
-            <a href="/" id="logo"></a>
-        </h1>
-        <nav id="main-nav">
-            <a href="/docs/build_status.html" class="main-nav-link">Build Status</a>
-            <a href="/tutorials/" class="main-nav-link">Tutorials</a>
-            <a href="/extensions/" class="main-nav-link">Extensions</a>
-        </nav>
-
-        <div class="secondary-nav">
-            <div id="search-input-wrap" class="standalone">
-                <div id="search-input-icon">
-                    <i class="fa fa-search"></i>
-                </div>
-                <input type="search" id="search-input" placeholder="Search...">
-            </div>
-
-            <div class="second-nav-links">
-                <span><a href="https://get.status.im/chat/public/developers" class="main-nav-link">Developers Chat</a></span>
-                <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
-            </div>
+      <div class="header">
+    <div class="header-left">
+        <div class="logo-wrap">
+            <span class="logo-span"><a class="logo" href="/"></a></span>
+            <span class="logo-span"><a class="logo-text" href="/">status</a></span>
         </div>
-
-        <a id="mobile-nav-toggle">
-            <span class="mobile-nav-toggle-bar"></span>
-            <span class="mobile-nav-toggle-bar"></span>
-            <span class="mobile-nav-toggle-bar"></span>
-        </a>
+        <header class="dropdown">
+            <nav>
+                <ul>
+                    <li class="has-submenu">
+                        <a href="#" class="main-link">Status App</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://status.im">About</a></li>
+                                <li><a href="https://status.im">Features</a></li>
+                                <li><a href="https://desktop.status.im">Desktop</a></li>
+                                <li><a href="https://docs.status.im">Docs</a></li>
+                                <li><a href="https://our.status.im">Blog</a></li>
+                                <li><a href="https://people-ops.status.im/">Contribute</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="https://embark.status.im" class="main-link">Embark</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://embark.status.im">About</a></li>
+                                <li><a href="https://embark.status.im/docs">Docs</a></li>
+                                <li><a href="https://our.status.im/tag/embark">Blog</a></li>
+                                <li><a href="https://gitter.im/embark-framework/Lobby">Contribute</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Studio</a></li>
+                    <li class="has-submenu"><a href="https://status.im/incubate">Incubate</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://status.im/incubate">About</a></li>
+                                <li><a href="https://status.im/incubate">Projects</a></li>
+                                <li><a href="https://status.im/incubate">Projects</a></li>
+                                <li><a href="https://get.status.im/chat/public/status-incubate">Community</a></li>
+                                <li><a href="https://our.status.im/tag/incubate">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="https://nimbus.status.im" class="main-link">Nimbus</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="https://nimbus.status.im/docs/">Docs</a></li>
+                                <li><a href="https://our.status.im/tag/research">Blog</a></li>
+                                <li><a href="https://gitter.im/status-im/nimbus">Contribute</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="https://our.status.im/tag/hardwallet">Hardwallet</a></li>
+                    <li class="has-submenu">
+                        <a href="https://people-ops.status.im">Peopleops</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://our.status.im/our-principles/">Our Principles</a></li>
+                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/working_here.html">Working Here</a></li>
+                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/">Docs</a></li>
+                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/life_status.html">Life at Status</a></li>
+                                <li><a href="https://status.im/open-positions.html">Contribute</a></li>
+                                <li><a href="https://status.im/open-positions.html">Jobs</a></li>
+                                <li><a href="https://status-im.github.io/tag/people-ops">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     </div>
-</header>
-
+    <div class="secondary-nav">
+        <div id="search-input-wrap">
+            <div id="search-input-icon">
+                <i class="fa fa-search"></i>
+            </div>
+            <input type="search" id="search-input" placeholder="Search...">
+        </div>
+        <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Public Chat</a></span>
+        <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
+        <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
+    </div>
+    <a href="#" class="mobile-menu-trigger">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 7C4 6.44727 4.44775 6 5 6H19C19.5522 6 20 6.44727 20 7C20 7.28516 19.8811 7.54102 19.6903 7.72266C19.5109 7.89453 19.2677 8 19 8H5C4.44775 8 4 7.55273 4 7ZM4 17C4 16.4473 4.44775 16 5 16H19C19.1147 16 19.2251 16.0195 19.3278 16.0547C19.463 16.1016 19.5851 16.1777 19.687 16.2734C19.8798 16.4551 20 16.7129 20 17C20 17.5527 19.5522 18 19 18H5C4.44775 18 4 17.5527 4 17ZM5 11C4.44775 11 4 11.4473 4 12C4 12.5527 4.44775 13 5 13H15C15.3312 13 15.6249 12.8398 15.8068 12.5918C15.9282 12.4258 16 12.2207 16 12C16 11.6387 15.8087 11.3223 15.5221 11.1465C15.3701 11.0527 15.1913 11 15 11H5Z" fill="black"/>
+        </svg>
+    </a>
+</div>
     
-    <div id="content-wrap">
+    <div class="page-intro wrapper">
+  <header class="article-header">
+    <h1 class="article-title" itemprop="name">Extension chat command tutorial</h1>
+    <a href="https://github.com/status-im/docs.status.im/edit/develop/source/tutorials/extensions_tutorial_chat_command.md" class="article-edit-link" title="Improve this doc">Edit on Github</a>
+  </header>
+</div>
+<div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Extensions</strong><a href="extensions_tutorial_chat_command.html" class="sidebar-link current">Your First Chat Extension</a>
+  </div>
+</aside>
       <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
-              <header class="article-header">
-                <h1 class="article-title" itemprop="name">Extension chat command tutorial</h1>
-                <a href="https://github.com/status-im/docs.status.im/edit/develop/source/tutorials/extensions_tutorial_chat_command.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
-              </header>
               <div class="article-content" itemprop="articleBody">
                 <h1 id="Write-a-chat-command" class="article-heading"><a href="#Write-a-chat-command" class="headerlink" title="Write a chat command"></a>Write a chat command<a class="article-anchor" href="#Write-a-chat-command" aria-hidden="true"></a></h1><p>One of the main use case for extensions is to add new chat commands. This tutorial will go step by step through the creation and deployment of a chat command allowing to send NFTs.</p>
 <h2 id="Add-meta-data" class="article-heading"><a href="#Add-meta-data" class="headerlink" title="Add meta data"></a>Add meta data<a class="article-anchor" href="#Add-meta-data" aria-hidden="true"></a></h2><p>First step is to create the skeleton extension with some relevant metadata:</p>
@@ -124,104 +195,99 @@
 <h2 id="Deploy" class="article-heading"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy<a class="article-anchor" href="#Deploy" aria-hidden="true"></a></h2><p>Extensions are identified by a URI and can be loaded in status via a universal link.</p>
 <p>Currently only GitHub gist is supported as provider.</p>
 <p>A universal link pointing to an extension would then look like: <code>https://get.status.im/extension/gist@janherich/92747e730b2e115bcbe145114d024e66</code></p>
-<h2 id="Use" class="article-heading"><a href="#Use" class="headerlink" title="Use"></a>Use<a class="article-anchor" href="#Use" aria-hidden="true"></a></h2><p>The simplest option is to scan a QR code pointing to your extension. You can also navigate to status user profile and open the <code>Extensions</code> item in the <code>Advanced</code> section.<br>This option is only available in developer mode.</p>
-<p><img src="assets/extensions/profile.jpg" alt="alt-text"></p>
-<p><img src="assets/extensions/add.jpg" alt="alt-text"></p>
-<p>Once loaded, details about an extension are available.</p>
-<p><img src="assets/extensions/install.jpg" alt="alt-text"></p>
-<p>An extension can then be installed. Once installed all hooks are <code>active</code>.</p>
-<p>Any extension can then be <code>deactivated</code> or re-<code>activated</code>. Associated hooks will then be removed/added from Status.</p>
-<p><img src="assets/extensions/list.jpg" alt="alt-text"></p>
-<p>You can now use your new extension from within a 1-1 chat.</p>
-<p><img src="assets/extensions/collectible-type.jpg" alt="alt-text"></p>
-<p><img src="assets/extensions/collectible-token.jpg" alt="alt-text"></p>
-<p><img src="assets/extensions/collectible-preview.jpg" alt="alt-text"></p>
+<h2 id="Use" class="article-heading"><a href="#Use" class="headerlink" title="Use"></a>Use<a class="article-anchor" href="#Use" aria-hidden="true"></a></h2><p>The simplest option is to scan a QR code pointing to your extension. You can also navigate to status user profile and open the <code>Extensions</code> item in the <code>Advanced</code> section. This option is only available in developer mode.</p>
+<p>Once loaded, details about an extension are available. An extension can then be installed. Once installed all hooks are <code>active</code>. Any extension can then be <code>deactivated</code> or re-<code>activated</code>. Associated hooks will then be removed/added from Status. </p>
+<p>You can now use your new extension from within a 1-1 chat!</p>
+<p><img src="/tutorials/thumbnails/collectible-chat-command.gif" alt="collectibles in chat"></p>
 <h2 id="Full-extension-code" class="article-heading"><a href="#Full-extension-code" class="headerlink" title="Full extension code"></a>Full extension code<a class="article-anchor" href="#Full-extension-code" aria-hidden="true"></a></h2><figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;meta &#123;<span class="symbol">:name</span>          <span class="string">"Collectibles"</span></span><br><span class="line">       <span class="symbol">:description</span>   <span class="string">"Demonstration of collectible command"</span></span><br><span class="line">       <span class="symbol">:documentation</span> <span class="string">"Some nice documentation"</span>&#125;</span><br><span class="line"></span><br><span class="line"> views/preview</span><br><span class="line"> (<span class="name"><span class="builtin-name">let</span></span> [&#123;&#123;&#123;symbol <span class="symbol">:symbol</span> token <span class="symbol">:token</span> tx-hash <span class="symbol">:tx-hash</span>&#125; <span class="symbol">:params</span>&#125; <span class="symbol">:content</span> outgoing <span class="symbol">:outgoing</span> timestamp-str <span class="symbol">:timestamp-str</span>&#125; properties</span><br><span class="line">        collectible-token [get-collectible-token &#123;<span class="symbol">:symbol</span> symbol <span class="symbol">:token</span> token&#125;]</span><br><span class="line">    [view &#123;<span class="symbol">:flex-direction</span> <span class="symbol">:column</span></span><br><span class="line">           <span class="symbol">:align-items</span>    <span class="symbol">:flex-start</span>&#125;</span><br><span class="line">    [status/nft-token collectible-token]</span><br><span class="line">    [view &#123;<span class="symbol">:color</span>          (<span class="name"><span class="builtin-name">if</span></span> outgoing <span class="string">"#707caf"</span> <span class="string">"#939ba1"</span>)</span><br><span class="line">           <span class="symbol">:margin-top</span>     <span class="number">6</span></span><br><span class="line">           <span class="symbol">:font-size</span>      <span class="number">12</span></span><br><span class="line">           <span class="symbol">:flex-direction</span> <span class="symbol">:row</span>&#125;</span><br><span class="line">    [text <span class="string">"Sent at "</span>]</span><br><span class="line">    [text timestamp-str]]</span><br><span class="line">    [status/send-status &#123;<span class="symbol">:tx-hash</span> tx-hash <span class="symbol">:outgoing</span> outgoing&#125;]])</span><br><span class="line"></span><br><span class="line"> views/short-preview</span><br><span class="line"> (<span class="name"><span class="builtin-name">let</span></span> [&#123;&#123;&#123;symbol <span class="symbol">:symbol</span>&#125; <span class="symbol">:params</span>&#125; <span class="symbol">:content</span> outgoing <span class="symbol">:outgoing</span>&#125; properties]</span><br><span class="line">   [view &#123;<span class="symbol">:flex-direction</span> <span class="symbol">:row</span></span><br><span class="line">          <span class="symbol">:align-items</span>    <span class="symbol">:flex-start</span>&#125;</span><br><span class="line">     [text (<span class="name"><span class="builtin-name">if</span></span> outgoing <span class="string">"Sent "</span> <span class="string">"Received "</span>)]</span><br><span class="line">     [text symbol]])</span><br><span class="line"></span><br><span class="line">hooks/commands.collectible</span><br><span class="line">&#123;<span class="symbol">:scope</span>         #&#123;<span class="symbol">:personal-chats</span>&#125;</span><br><span class="line"> <span class="symbol">:preview</span>       preview</span><br><span class="line"> <span class="symbol">:short-preview</span> short-preview</span><br><span class="line"> <span class="symbol">:parameters</span>    [&#123;<span class="symbol">:id</span>          <span class="symbol">:symbol</span></span><br><span class="line">                  <span class="symbol">:type</span>        <span class="symbol">:text</span></span><br><span class="line">                  <span class="symbol">:placeholder</span> <span class="string">"Collectible symbol"</span></span><br><span class="line">                  <span class="symbol">:suggestions</span> status/asset-selector&#125;</span><br><span class="line">                 &#123;<span class="symbol">:id</span>          <span class="symbol">:token</span></span><br><span class="line">                  <span class="symbol">:type</span>        <span class="symbol">:number</span></span><br><span class="line">                  <span class="symbol">:placeholder</span> <span class="string">"Collectible token"</span></span><br><span class="line">                  <span class="symbol">:suggestions</span> status/token-selector&#125;]&#125;&#125;</span><br></pre></td></tr></table></figure>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-09-26T19:44:50.657Z" itemprop="dateModified">Last updated: 2018-09-26</time>
+                <time class="article-footer-updated" datetime="2018-10-05T13:29:48.992Z" itemprop="dateModified">Last updated: 2018-10-05</time>
                 
               </footer>
             </div>
           </div>
-          <aside id="article-toc" role="navigation">
-            <div id="article-toc-inner">
-              <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Write-a-chat-command"><span class="toc-text">Write a chat command</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Add-meta-data"><span class="toc-text">Add meta data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Define-hook-entry-point-chat-command"><span class="toc-text">Define hook entry point (chat command)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Scope"><span class="toc-text">Scope</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Previews"><span class="toc-text">Previews</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Parameters"><span class="toc-text">Parameters</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Deploy"><span class="toc-text">Deploy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use"><span class="toc-text">Use</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Full-extension-code"><span class="toc-text">Full extension code</span></a></li></ol></li></ol>
-              <a href="#" id="article-toc-top">Back to Top</a>
-            </div>
-          </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">Extensions</strong><a href="extensions_tutorial_chat_command.html" class="sidebar-link current">Your First Chat Extension</a>
-  </div>
-</aside>
     </div>
   </div>
 </div>
 
-    <div class="pre-footer">
-    <div class="pre-footer-inner">
-        <div class="community">
-            <div class="community-item">
-                <h3>We’re All Open Source</h3>
-                <p>Check out the source code on GitHub and contribute</p>
-                <a href="https://github.com/status-im" class="button" target="_blank">Github</a>
+    <footer class="site-footer">
+    <div class="container">
+        <div class="info">
+            <div class="blog-logo">
+                <a href="https://status.im/" ><img src="../img/logo-footer.svg" alt="Status"><span>status</span></a>
             </div>
-            <div class="community-item">
-                <h3>We’re here to help</h3>
-                <p>Contact us for support and join in on the conversation in Status itself</p>
-                <a href="https://get.status.im/chat/public/developers" class="button">Join Chat</a>
-            </div>
+            <p>Status Holdings Pte. Ltd. <br>6 Ubi Road Singapore </p>
         </div>
-        <div class="mail">
-            <div class="mail-inner">
-                <h3>Download Status</h3>
-                <p>If you have an Android, you can easily get Status <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" target="_blank" class="download">here</a>. You can also download our nightlies and desktop builds <a  href="https://status-im.github.io/nightly/" target="_blank" class="download">here</a>.</p>
-                <p>If you're on iOS, you'll need to use <a href="https://testflight.apple.com/join/J8EuJmey" target="_blank" class="download">this form</a> to sign up easily and get TestFlight while we're still in Beta.</p>
-            </div>
+        <div class="social-links">
+            <h3>Social links</h3>
+            <ul class="community">
+                <li><a href="https://www.facebook.com/ethstatus" target="_blank" class="footer-facebook">Facebook</a></li>
+                <li><a href="https://twitter.com/ethstatus" target="_blank" class="footer-twitter">Twitter</a></li>
+                <li><a href="https://chat.status.im/#/register" target="_blank" class="footer-riot">Riot</a></li>
+                <li><a href="https://github.com/status-im" target="_blank" class="footer-github">GitHub</a></li>
+                <li><a href="https://www.reddit.com/r/statusim/" target="_blank" class="footer-reddit">Reddit</a></li>
+                <li><a href="https://www.youtube.com/statusim" target="_blank" class="footer-youtube">YouTube</a></li>
+            </ul>
         </div>
+        <div class="more">
+            <h3>More </h3>
+            <ul>
+                <li><a href="/docs/">Status Docs</a></li>
+                <li><a href="https://our.status.im/">Our Status</a></li>
+                <li><a href="https://status.im/open-positions.html">Jobs</a></li>
+                <li><a href="https://status.im/incubate">Incubate</a></li>
+                <li><a href="https://status.im/projects">Projects</a></li>
+                <li><a href="https://status.im/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
     </div>
-</div>
-
-<div class="footer">
-    <div class="footer-inner">
-        <div class="footer-logo-wrap">
-            <div class="footer-logo-wrap__inner">
-                <a class="footer-logo" href="https://status.im" target="_blank"></a>
-                <div class="footer-address">Status Research & Development GmbH<br/>Baarerstrasse 10<br/>Zug, Switzerland
-                </div>
-            </div>
-        </div>
     </div>
-</div>
-
+</footer>
   </div>
   <div id="mobile-nav-dimmer"></div>
-  <nav id="mobile-nav">
-  <div id="mobile-nav-inner">
-    <ul id="mobile-nav-list">
-      <a href="/docs/" class="mobile-nav-link">Docs</a><a href="/tutorials/" class="mobile-nav-link">Tutorials</a><a href="/plugins/" class="mobile-nav-link">Plugins</a><a href="/chat/" class="mobile-nav-link">Chat</a><a href="/news/" class="mobile-nav-link">Blog</a><a href="/wip/" class="mobile-nav-link">menu.wip</a>
-      <li class="mobile-nav-item">
-        <a href="https://github.com/staus-im" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
-      </li>
-    </ul>
-    
-      <strong class="mobile-nav-title">Extensions</strong><a href="extensions_tutorial_chat_command.html" class="mobile-nav-link current">Your First Chat Extension</a>
-    
+  <div class="backdrop"></div>
+<div class="mobile-menu-container">
+  <div class="mobile-menu-container-inner">
+    <div class="mobile-menu-header">
+      <div class="logo-wrap">
+          <span class="logo-span"><a class="logo" href="/"></a></span>
+          <span class="logo-span"><a class="logo-text" href="/">status</a></span>
+      </div>
+      <a href="#" class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.574L7.72275 6.2968C7.32616 5.90021 6.68994 5.90241 6.29617 6.29617C5.89966 6.69269 5.90269 7.32864 6.2968 7.72275L10.574 12L6.2968 16.2772C5.90021 16.6738 5.90241 17.3101 6.29617 17.7038C6.69269 18.1003 7.32864 18.0973 7.72275 17.7032L12 13.426L16.2772 17.7032C16.6738 18.0998 17.3101 18.0976 17.7038 17.7038C18.1003 17.3073 18.0973 16.6714 17.7032 16.2772L13.426 12L17.7032 7.72275C18.0998 7.32616 18.0976 6.68994 17.7038 6.29617C17.3073 5.89966 16.6714 5.90269 16.2772 6.2968L12 10.574Z" fill="black"/>
+        </svg>
+      </a>
+    </div>
+    <div class="ecosystem">
+      <span class="title">Ecosystem</span>
+    </div>
+    <div class="community">
+      <span class="title">Community</span>
+    </div>
   </div>
-  <div id="mobile-lang-select-wrap">
-    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
-    <select id="mobile-lang-select" data-canonical="">
-      
-        <option value="en" selected>English</option>
-      
-    </select>
+  <div class="mobile-submenu-container-inner">
+    <div class="mobile-menu-header">
+      <a href="#" class="back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00687 12.1016C7.02704 12.3261 7.1228 12.5448 7.29281 12.7143L14.3042 19.7079C14.6926 20.0953 15.3188 20.0988 15.7089 19.7097C16.0963 19.3232 16.0907 18.6911 15.7072 18.3085L9.38119 11.9986L15.7072 5.68865C16.0956 5.30126 16.099 4.67664 15.7089 4.28751C15.3215 3.90107 14.6877 3.9067 14.3042 4.28924L7.29281 11.2828C7.06819 11.5069 6.97231 11.8103 7.00687 12.1016Z" fill="black"/>
+        </svg>
+      </a>
+      <span class="title">Status app</span>
+      <a href="#" class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.574L7.72275 6.2968C7.32616 5.90021 6.68994 5.90241 6.29617 6.29617C5.89966 6.69269 5.90269 7.32864 6.2968 7.72275L10.574 12L6.2968 16.2772C5.90021 16.6738 5.90241 17.3101 6.29617 17.7038C6.69269 18.1003 7.32864 18.0973 7.72275 17.7032L12 13.426L16.2772 17.7032C16.6738 18.0998 17.3101 18.0976 17.7038 17.7038C18.1003 17.3073 18.0973 16.6714 17.7032 16.2772L13.426 12L17.7032 7.72275C18.0998 7.32616 18.0976 6.68994 17.7038 6.29617C17.3073 5.89966 16.6714 5.90269 16.2772 6.2968L12 10.574Z" fill="black"/>
+        </svg>
+      </a>
+    </div>
+    <div class="dropdown">
+      <nav></nav>
+    </div>
   </div>
-</nav>
+</div>
   <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/bundle.js?v=0.0.1"></script>
@@ -230,6 +296,7 @@
 <script src="/js/toc.js"></script>
 <script src="/js/mobile_nav.js"></script>
 <script src="/js/search.js"></script>
+<script src="/js/fetch_blog_posts.js"></script>
 <!-- endbuild -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>

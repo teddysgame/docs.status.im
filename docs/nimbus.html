@@ -14,7 +14,7 @@
     
   
   <!-- Icon -->
-  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileColor" content="#ff9c00">
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
 
   <link rel="icon" type="image/png" href="/img/logo-16.png?v=0.0.5" sizes="16x16" />
@@ -34,58 +34,129 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Status">
-  <meta property="og:image" content="/img/share.png" />
-  <meta property="og:title" content="Status, a Mobile Ethereum OS" />
+  <meta property="og:image" content="/img/graphic-licensing.png" />
+  <meta property="og:title" content="Nimbus, a Light Client for Ethereum 2.0" />
 </head>
 
 <body>
   <div id="container">
     
-      <header id="header" class="wrapper">
-    <div id="header-inner" class="inner">
-        <h1 id="logo-wrap">
-            <a href="/" id="logo"></a>
-        </h1>
-        <nav id="main-nav">
-            <a href="/docs/build_status.html" class="main-nav-link">Build Status</a>
-            <a href="/tutorials/" class="main-nav-link">Tutorials</a>
-            <a href="/extensions/" class="main-nav-link">Extensions</a>
-        </nav>
-
-        <div class="secondary-nav">
-            <div id="search-input-wrap" class="standalone">
-                <div id="search-input-icon">
-                    <i class="fa fa-search"></i>
-                </div>
-                <input type="search" id="search-input" placeholder="Search...">
-            </div>
-
-            <div class="second-nav-links">
-                <span><a href="https://get.status.im/chat/public/developers" class="main-nav-link">Developers Chat</a></span>
-                <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
-            </div>
+      <div class="header">
+    <div class="header-left">
+        <div class="logo-wrap">
+            <span class="logo-span"><a class="logo" href="/"></a></span>
+            <span class="logo-span"><a class="logo-text" href="/">status</a></span>
         </div>
-
-        <a id="mobile-nav-toggle">
-            <span class="mobile-nav-toggle-bar"></span>
-            <span class="mobile-nav-toggle-bar"></span>
-            <span class="mobile-nav-toggle-bar"></span>
-        </a>
+        <header class="dropdown">
+            <nav>
+                <ul>
+                    <li class="has-submenu">
+                        <a href="#" class="main-link">Status App</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://status.im">About</a></li>
+                                <li><a href="https://status.im">Features</a></li>
+                                <li><a href="https://desktop.status.im">Desktop</a></li>
+                                <li><a href="https://docs.status.im">Docs</a></li>
+                                <li><a href="https://our.status.im">Blog</a></li>
+                                <li><a href="https://people-ops.status.im/">Contribute</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="https://embark.status.im" class="main-link">Embark</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://embark.status.im">About</a></li>
+                                <li><a href="https://embark.status.im/docs">Docs</a></li>
+                                <li><a href="https://our.status.im/tag/embark">Blog</a></li>
+                                <li><a href="https://gitter.im/embark-framework/Lobby">Contribute</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Studio</a></li>
+                    <li class="has-submenu"><a href="https://status.im/incubate">Incubate</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://status.im/incubate">About</a></li>
+                                <li><a href="https://status.im/incubate">Projects</a></li>
+                                <li><a href="https://status.im/incubate">Projects</a></li>
+                                <li><a href="https://get.status.im/chat/public/status-incubate">Community</a></li>
+                                <li><a href="https://our.status.im/tag/incubate">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="https://nimbus.status.im" class="main-link">Nimbus</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="https://nimbus.status.im/docs/">Docs</a></li>
+                                <li><a href="https://our.status.im/tag/research">Blog</a></li>
+                                <li><a href="https://gitter.im/status-im/nimbus">Contribute</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="https://our.status.im/tag/hardwallet">Hardwallet</a></li>
+                    <li class="has-submenu">
+                        <a href="https://people-ops.status.im">Peopleops</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://our.status.im/our-principles/">Our Principles</a></li>
+                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/working_here.html">Working Here</a></li>
+                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/">Docs</a></li>
+                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/life_status.html">Life at Status</a></li>
+                                <li><a href="https://status.im/open-positions.html">Contribute</a></li>
+                                <li><a href="https://status.im/open-positions.html">Jobs</a></li>
+                                <li><a href="https://status-im.github.io/tag/people-ops">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     </div>
-</header>
-
+    <div class="secondary-nav">
+        <div id="search-input-wrap">
+            <div id="search-input-icon">
+                <i class="fa fa-search"></i>
+            </div>
+            <input type="search" id="search-input" placeholder="Search...">
+        </div>
+        <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Public Chat</a></span>
+        <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
+        <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
+    </div>
+    <a href="#" class="mobile-menu-trigger">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 7C4 6.44727 4.44775 6 5 6H19C19.5522 6 20 6.44727 20 7C20 7.28516 19.8811 7.54102 19.6903 7.72266C19.5109 7.89453 19.2677 8 19 8H5C4.44775 8 4 7.55273 4 7ZM4 17C4 16.4473 4.44775 16 5 16H19C19.1147 16 19.2251 16.0195 19.3278 16.0547C19.463 16.1016 19.5851 16.1777 19.687 16.2734C19.8798 16.4551 20 16.7129 20 17C20 17.5527 19.5522 18 19 18H5C4.44775 18 4 17.5527 4 17ZM5 11C4.44775 11 4 11.4473 4 12C4 12.5527 4.44775 13 5 13H15C15.3312 13 15.6249 12.8398 15.8068 12.5918C15.9282 12.4258 16 12.2207 16 12C16 11.6387 15.8087 11.3223 15.5221 11.1465C15.3701 11.0527 15.1913 11 15 11H5Z" fill="black"/>
+        </svg>
+    </a>
+</div>
     
-    <div id="content-wrap">
+    <div class="page-intro wrapper">
+  <header class="article-header">
+    <h1 class="article-title" itemprop="name">Nimbus</h1>
+    <a href="https://github.com/status-im/docs.status.im/edit/develop/source/docs/nimbus.md" class="article-edit-link" title="Improve this doc">Edit on Github</a>
+  </header>
+</div>
+<div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Use Status</strong><a href="introduction.html" class="sidebar-link">Who We Are</a><a href="contributor_guide.html" class="sidebar-link">Contributor Guide</a><a href="ens_usernames.html" class="sidebar-link">ENS Usernames</a><a href="FAQs.html" class="sidebar-link">FAQs</a><strong class="sidebar-title">Build Status</strong><a href="build_status.html" class="sidebar-link">Building Status</a><a href="build_status_go.html" class="sidebar-link">Building Status-Go</a><a href="status_react_structure.html" class="sidebar-link">Status-React Structure</a><a href="send_transaction_flow.html" class="sidebar-link">Send Transaction Flow</a><strong class="sidebar-title">Build Status Desktop</strong><a href="intro_desktop.html" class="sidebar-link">Getting Started</a><a href="build_desktop.html" class="sidebar-link">Building Desktop</a><a href="build_desktop_troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="build_desktop_google_breakpad.html" class="sidebar-link">Using Breakpad</a><a href="build_desktop_jenkins.html" class="sidebar-link">Using Jenkins</a><strong class="sidebar-title">Status Node</strong><a href="run_status_node.html" class="sidebar-link">Run Status Node</a><strong class="sidebar-title">Testing</strong><a href="testing.html" class="sidebar-link">How We Test</a><a href="report_a_bug.html" class="sidebar-link">Report a Bug</a><strong class="sidebar-title">Security</strong><a href="security_champions.html" class="sidebar-link">Security Champions</a><a href="security_existing_features.html" class="sidebar-link">Existing Features</a><a href="security_experiment.html" class="sidebar-link">Security Experiment</a><a href="security_process.html" class="sidebar-link">Our Process</a><a href="security_threat_modeling.html" class="sidebar-link">Threat Modeling</a><a href="security_github_labels.html" class="sidebar-link">Github Labels</a><a href="security_sensitive_data.html" class="sidebar-link">Sensitive Data</a>
+  </div>
+</aside>
       <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
-              <header class="article-header">
-                <h1 class="article-title" itemprop="name">Nimbus</h1>
-                <a href="https://github.com/status-im/docs.status.im/edit/develop/source/docs/nimbus.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
-              </header>
               <div class="article-content" itemprop="articleBody">
                 <h2 id="An-Ethereum-2-0-Sharding-Client" class="article-heading"><a href="#An-Ethereum-2-0-Sharding-Client" class="headerlink" title="An Ethereum 2.0 Sharding Client"></a>An Ethereum 2.0 Sharding Client<a class="article-anchor" href="#An-Ethereum-2-0-Sharding-Client" aria-hidden="true"></a></h2><p>Draft 2018-05-22</p>
 <h2 id="OVERVIEW" class="article-heading"><a href="#OVERVIEW" class="headerlink" title="OVERVIEW"></a>OVERVIEW<a class="article-anchor" href="#OVERVIEW" aria-hidden="true"></a></h2><p>Nimbus aims to be a <a href="https://github.com/ethereum/wiki/wiki/Sharding-FAQ" target="_blank" rel="noopener">sharding</a> client implementation for the Ethereum Blockchain Application Platform. Because the largest deployment of Ethereum will potentially be on embedded systems, Nimbus will be designed to perform well on IoT and personal mobile devices, including older smartphones with resource-restricted hardware. The extensible, configurable, and modular design of Nimbus will make it production ready for Web 3.0 and will ensure that it can be supported and maintained across all goals of Ethereum 2.0.</p>
@@ -275,87 +346,90 @@
               </div>
               <footer class="article-footer">
                 <time class="article-footer-updated" datetime="2018-09-26T19:44:50.653Z" itemprop="dateModified">Last updated: 2018-09-26</time>
-                <a href="status_optimized.html" class="article-footer-prev" title="Optimised for Status"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="testing.html" class="article-footer-next" title="How We Test"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <a href="introduction.html" class="article-footer-next" title="Who We Are"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
             </div>
           </div>
-          <aside id="article-toc" role="navigation">
-            <div id="article-toc-inner">
-              <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#An-Ethereum-2-0-Sharding-Client"><span class="toc-text">An Ethereum 2.0 Sharding Client</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OVERVIEW"><span class="toc-text">OVERVIEW</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GOALS"><span class="toc-text">GOALS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REQUIREMENTS"><span class="toc-text">REQUIREMENTS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-on-Embedded-Systems"><span class="toc-text">Development on Embedded Systems</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Extensible-Configurable-and-Modular-Design"><span class="toc-text">Extensible, Configurable, and Modular Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commitment-to-Ethereum-Improvement-Proposals-EIP"><span class="toc-text">Commitment to Ethereum Improvement Proposals (EIP)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#User-Experience"><span class="toc-text">User Experience</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Licensing-MIT-Apache-v2-0"><span class="toc-text">Licensing: MIT, Apache v2.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Biweekly-Development-Reports-Technical-Writing-and-Promotion"><span class="toc-text">Biweekly Development Reports, Technical Writing, and Promotion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bounty-Based-Development"><span class="toc-text">Bounty-Based Development</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TEAM"><span class="toc-text">TEAM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Alex-Mandel"><span class="toc-text">Alex Mandel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Eugene-Kabanov"><span class="toc-text">Eugene Kabanov</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jacek-Sieka"><span class="toc-text">Jacek Sieka</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mamy-Ratsimbazafy"><span class="toc-text">Mamy Ratsimbazafy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ryan-Lipscombe"><span class="toc-text">Ryan Lipscombe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Yuriy-Glukhov"><span class="toc-text">Yuriy Glukhov</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zahary-Karadjov"><span class="toc-text">Zahary Karadjov</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MILESTONES"><span class="toc-text">MILESTONES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Formation-of-the-Team-and-Detailed-Project-Implementation-Timeline"><span class="toc-text">Formation of the Team, and Detailed Project Implementation Timeline</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#January-February-2018"><span class="toc-text">January - February 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Completed"><span class="toc-text">Completed:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compatibility-with-Ethereum-1-0"><span class="toc-text">Compatibility with Ethereum 1.0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#January-November-2018"><span class="toc-text">January - November 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-1"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sharding-Phase-1"><span class="toc-text">Sharding Phase 1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#July-November-2018"><span class="toc-text">July - November 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goal"><span class="toc-text">Goal:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Auditing-of-Beta-and-Security"><span class="toc-text">Auditing of Beta and Security</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#November-2018-March-2019"><span class="toc-text">November 2018 - March 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goal-1"><span class="toc-text">Goal:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation-of-Whisper-and-PSS"><span class="toc-text">Implementation of Whisper and PSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#July-November-2018-1"><span class="toc-text">July - November 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-2"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Support-for-LES"><span class="toc-text">Support for LES</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#July-November-2018-2"><span class="toc-text">July - November 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-3"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sharding-Phase-2"><span class="toc-text">Sharding Phase 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#November-2018-July-2019"><span class="toc-text">November 2018 - July 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-4"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Casper-Implementation"><span class="toc-text">Casper Implementation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#December-2018-February-2019"><span class="toc-text">December 2018 - February 2019</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation-of-Swarm"><span class="toc-text">Implementation of Swarm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#January-July-2019"><span class="toc-text">January - July 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-5"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sharding-Phase-3"><span class="toc-text">Sharding Phase 3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#March-August-2019"><span class="toc-text">March - August 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-6"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ongoing-Improvements-in-Sharding"><span class="toc-text">Ongoing Improvements in Sharding</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#August-December-2019"><span class="toc-text">August - December 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-7"><span class="toc-text">Goals:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ETYMOLOGY"><span class="toc-text">ETYMOLOGY</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ideas-Considered-for-Implementation"><span class="toc-text">Ideas Considered for Implementation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Resources"><span class="toc-text">Resources</span></a>
-              <a href="#" id="article-toc-top">Back to Top</a>
-            </div>
-          </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">Use Status</strong><a href="introduction.html" class="sidebar-link">Who We Are</a><a href="userguide.html" class="sidebar-link">User Guide</a><a href="contributor_guide.html" class="sidebar-link">Contributor Guide</a><a href="ens_usernames.html" class="sidebar-link">ENS Usernames</a><a href="FAQs.html" class="sidebar-link">FAQs</a><strong class="sidebar-title">Build Status</strong><a href="build_status.html" class="sidebar-link">Building Status</a><a href="build_status_go.html" class="sidebar-link">Building Status-Go</a><a href="status_react_structure.html" class="sidebar-link">Status-React Structure</a><a href="send_transaction_flow.html" class="sidebar-link">Send Transaction Flow</a><strong class="sidebar-title">Build Status Desktop</strong><a href="intro_desktop.html" class="sidebar-link">Getting Started</a><a href="build_desktop.html" class="sidebar-link">Building Desktop</a><a href="build_desktop_troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="build_desktop_google_breakpad.html" class="sidebar-link">Using Breakpad</a><a href="build_desktop_jenkins.html" class="sidebar-link">Using Jenkins</a><strong class="sidebar-title">Status Node</strong><a href="run_status_node.html" class="sidebar-link">Run Status Node</a><strong class="sidebar-title">Status Extensions</strong><a href="add_your_dapp.html" class="sidebar-link">Add Your DApp to Status</a><a href="status_web_api.html" class="sidebar-link">JS API</a><a href="http-debugging.html" class="sidebar-link">Debugging</a><a href="intro_dapps.html" class="sidebar-link">Manifesto</a><a href="extensions_spec.html" class="sidebar-link">Extensions Technical Spec</a><a href="embark.html" class="sidebar-link">Embark</a><a href="status_optimized.html" class="sidebar-link">Optimised for Status</a><strong class="sidebar-title">Research</strong><a href="nimbus.html" class="sidebar-link current">Nimbus</a><strong class="sidebar-title">Testing</strong><a href="testing.html" class="sidebar-link">How We Test</a><a href="report_a_bug.html" class="sidebar-link">Report a Bug</a><strong class="sidebar-title">Security</strong><a href="security_champions.html" class="sidebar-link">Security Champions</a><a href="security_existing_features.html" class="sidebar-link">Existing Features</a><a href="security_experiment.html" class="sidebar-link">Security Experiment</a><a href="security_process.html" class="sidebar-link">Our Process</a><a href="security_threat_modeling.html" class="sidebar-link">Threat Modeling</a><a href="security_github_labels.html" class="sidebar-link">Github Labels</a><a href="security_sensitive_data.html" class="sidebar-link">Sensitive Data</a>
-  </div>
-</aside>
     </div>
   </div>
 </div>
 
-    <div class="pre-footer">
-    <div class="pre-footer-inner">
-        <div class="community">
-            <div class="community-item">
-                <h3>We’re All Open Source</h3>
-                <p>Check out the source code on GitHub and contribute</p>
-                <a href="https://github.com/status-im" class="button" target="_blank">Github</a>
+    <footer class="site-footer">
+    <div class="container">
+        <div class="info">
+            <div class="blog-logo">
+                <a href="https://status.im/" ><img src="../img/logo-footer.svg" alt="Status"><span>status</span></a>
             </div>
-            <div class="community-item">
-                <h3>We’re here to help</h3>
-                <p>Contact us for support and join in on the conversation in Status itself</p>
-                <a href="https://get.status.im/chat/public/developers" class="button">Join Chat</a>
-            </div>
+            <p>Status Holdings Pte. Ltd. <br>6 Ubi Road Singapore </p>
         </div>
-        <div class="mail">
-            <div class="mail-inner">
-                <h3>Download Status</h3>
-                <p>If you have an Android, you can easily get Status <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" target="_blank" class="download">here</a>. You can also download our nightlies and desktop builds <a  href="https://status-im.github.io/nightly/" target="_blank" class="download">here</a>.</p>
-                <p>If you're on iOS, you'll need to use <a href="https://testflight.apple.com/join/J8EuJmey" target="_blank" class="download">this form</a> to sign up easily and get TestFlight while we're still in Beta.</p>
-            </div>
+        <div class="social-links">
+            <h3>Social links</h3>
+            <ul class="community">
+                <li><a href="https://www.facebook.com/ethstatus" target="_blank" class="footer-facebook">Facebook</a></li>
+                <li><a href="https://twitter.com/ethstatus" target="_blank" class="footer-twitter">Twitter</a></li>
+                <li><a href="https://chat.status.im/#/register" target="_blank" class="footer-riot">Riot</a></li>
+                <li><a href="https://github.com/status-im" target="_blank" class="footer-github">GitHub</a></li>
+                <li><a href="https://www.reddit.com/r/statusim/" target="_blank" class="footer-reddit">Reddit</a></li>
+                <li><a href="https://www.youtube.com/statusim" target="_blank" class="footer-youtube">YouTube</a></li>
+            </ul>
         </div>
+        <div class="more">
+            <h3>More </h3>
+            <ul>
+                <li><a href="/docs/">Status Docs</a></li>
+                <li><a href="https://our.status.im/">Our Status</a></li>
+                <li><a href="https://status.im/open-positions.html">Jobs</a></li>
+                <li><a href="https://status.im/incubate">Incubate</a></li>
+                <li><a href="https://status.im/projects">Projects</a></li>
+                <li><a href="https://status.im/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
     </div>
-</div>
-
-<div class="footer">
-    <div class="footer-inner">
-        <div class="footer-logo-wrap">
-            <div class="footer-logo-wrap__inner">
-                <a class="footer-logo" href="https://status.im" target="_blank"></a>
-                <div class="footer-address">Status Research & Development GmbH<br/>Baarerstrasse 10<br/>Zug, Switzerland
-                </div>
-            </div>
-        </div>
     </div>
-</div>
-
+</footer>
   </div>
   <div id="mobile-nav-dimmer"></div>
-  <nav id="mobile-nav">
-  <div id="mobile-nav-inner">
-    <ul id="mobile-nav-list">
-      <a href="/docs/" class="mobile-nav-link">Docs</a><a href="/tutorials/" class="mobile-nav-link">Tutorials</a><a href="/plugins/" class="mobile-nav-link">Plugins</a><a href="/chat/" class="mobile-nav-link">Chat</a><a href="/news/" class="mobile-nav-link">Blog</a><a href="/wip/" class="mobile-nav-link">menu.wip</a>
-      <li class="mobile-nav-item">
-        <a href="https://github.com/staus-im" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
-      </li>
-    </ul>
-    
-      <strong class="mobile-nav-title">Use Status</strong><a href="introduction.html" class="mobile-nav-link">Who We Are</a><a href="userguide.html" class="mobile-nav-link">User Guide</a><a href="contributor_guide.html" class="mobile-nav-link">Contributor Guide</a><a href="ens_usernames.html" class="mobile-nav-link">ENS Usernames</a><a href="FAQs.html" class="mobile-nav-link">FAQs</a><strong class="mobile-nav-title">Build Status</strong><a href="build_status.html" class="mobile-nav-link">Building Status</a><a href="build_status_go.html" class="mobile-nav-link">Building Status-Go</a><a href="status_react_structure.html" class="mobile-nav-link">Status-React Structure</a><a href="send_transaction_flow.html" class="mobile-nav-link">Send Transaction Flow</a><strong class="mobile-nav-title">Build Status Desktop</strong><a href="intro_desktop.html" class="mobile-nav-link">Getting Started</a><a href="build_desktop.html" class="mobile-nav-link">Building Desktop</a><a href="build_desktop_troubleshooting.html" class="mobile-nav-link">Troubleshooting</a><a href="build_desktop_google_breakpad.html" class="mobile-nav-link">Using Breakpad</a><a href="build_desktop_jenkins.html" class="mobile-nav-link">Using Jenkins</a><strong class="mobile-nav-title">Status Node</strong><a href="run_status_node.html" class="mobile-nav-link">Run Status Node</a><strong class="mobile-nav-title">Status Extensions</strong><a href="add_your_dapp.html" class="mobile-nav-link">Add Your DApp to Status</a><a href="status_web_api.html" class="mobile-nav-link">JS API</a><a href="http-debugging.html" class="mobile-nav-link">Debugging</a><a href="intro_dapps.html" class="mobile-nav-link">Manifesto</a><a href="extensions_spec.html" class="mobile-nav-link">Extensions Technical Spec</a><a href="embark.html" class="mobile-nav-link">Embark</a><a href="status_optimized.html" class="mobile-nav-link">Optimised for Status</a><strong class="mobile-nav-title">Research</strong><a href="nimbus.html" class="mobile-nav-link current">Nimbus</a><strong class="mobile-nav-title">Testing</strong><a href="testing.html" class="mobile-nav-link">How We Test</a><a href="report_a_bug.html" class="mobile-nav-link">Report a Bug</a><strong class="mobile-nav-title">Security</strong><a href="security_champions.html" class="mobile-nav-link">Security Champions</a><a href="security_existing_features.html" class="mobile-nav-link">Existing Features</a><a href="security_experiment.html" class="mobile-nav-link">Security Experiment</a><a href="security_process.html" class="mobile-nav-link">Our Process</a><a href="security_threat_modeling.html" class="mobile-nav-link">Threat Modeling</a><a href="security_github_labels.html" class="mobile-nav-link">Github Labels</a><a href="security_sensitive_data.html" class="mobile-nav-link">Sensitive Data</a>
-    
+  <div class="backdrop"></div>
+<div class="mobile-menu-container">
+  <div class="mobile-menu-container-inner">
+    <div class="mobile-menu-header">
+      <div class="logo-wrap">
+          <span class="logo-span"><a class="logo" href="/"></a></span>
+          <span class="logo-span"><a class="logo-text" href="/">status</a></span>
+      </div>
+      <a href="#" class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.574L7.72275 6.2968C7.32616 5.90021 6.68994 5.90241 6.29617 6.29617C5.89966 6.69269 5.90269 7.32864 6.2968 7.72275L10.574 12L6.2968 16.2772C5.90021 16.6738 5.90241 17.3101 6.29617 17.7038C6.69269 18.1003 7.32864 18.0973 7.72275 17.7032L12 13.426L16.2772 17.7032C16.6738 18.0998 17.3101 18.0976 17.7038 17.7038C18.1003 17.3073 18.0973 16.6714 17.7032 16.2772L13.426 12L17.7032 7.72275C18.0998 7.32616 18.0976 6.68994 17.7038 6.29617C17.3073 5.89966 16.6714 5.90269 16.2772 6.2968L12 10.574Z" fill="black"/>
+        </svg>
+      </a>
+    </div>
+    <div class="ecosystem">
+      <span class="title">Ecosystem</span>
+    </div>
+    <div class="community">
+      <span class="title">Community</span>
+    </div>
   </div>
-  <div id="mobile-lang-select-wrap">
-    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
-    <select id="mobile-lang-select" data-canonical="docs/nimbus.html">
-      
-        <option value="en" selected>English</option>
-      
-    </select>
+  <div class="mobile-submenu-container-inner">
+    <div class="mobile-menu-header">
+      <a href="#" class="back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00687 12.1016C7.02704 12.3261 7.1228 12.5448 7.29281 12.7143L14.3042 19.7079C14.6926 20.0953 15.3188 20.0988 15.7089 19.7097C16.0963 19.3232 16.0907 18.6911 15.7072 18.3085L9.38119 11.9986L15.7072 5.68865C16.0956 5.30126 16.099 4.67664 15.7089 4.28751C15.3215 3.90107 14.6877 3.9067 14.3042 4.28924L7.29281 11.2828C7.06819 11.5069 6.97231 11.8103 7.00687 12.1016Z" fill="black"/>
+        </svg>
+      </a>
+      <span class="title">Status app</span>
+      <a href="#" class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.574L7.72275 6.2968C7.32616 5.90021 6.68994 5.90241 6.29617 6.29617C5.89966 6.69269 5.90269 7.32864 6.2968 7.72275L10.574 12L6.2968 16.2772C5.90021 16.6738 5.90241 17.3101 6.29617 17.7038C6.69269 18.1003 7.32864 18.0973 7.72275 17.7032L12 13.426L16.2772 17.7032C16.6738 18.0998 17.3101 18.0976 17.7038 17.7038C18.1003 17.3073 18.0973 16.6714 17.7032 16.2772L13.426 12L17.7032 7.72275C18.0998 7.32616 18.0976 6.68994 17.7038 6.29617C17.3073 5.89966 16.6714 5.90269 16.2772 6.2968L12 10.574Z" fill="black"/>
+        </svg>
+      </a>
+    </div>
+    <div class="dropdown">
+      <nav></nav>
+    </div>
   </div>
-</nav>
+</div>
   <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/bundle.js?v=0.0.1"></script>
@@ -364,6 +438,7 @@
 <script src="/js/toc.js"></script>
 <script src="/js/mobile_nav.js"></script>
 <script src="/js/search.js"></script>
+<script src="/js/fetch_blog_posts.js"></script>
 <!-- endbuild -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
