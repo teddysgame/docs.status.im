@@ -9,13 +9,13 @@
             <a class="button button--main" href="https://get.status.im">GET STATUS</a>
             <a class="button button--secondary" href="https://status-im.github.io/nightly">GET STATUS DESKTOP</a>
         </div>
-        <div class="intro-graphic">
-            <img src="../img/intro-graphic.png" />
-        </div>
     </div>
 </div>
 
 <div class="home-wrap">
+    <div class="intro-graphic">
+        <img src="../img/intro-graphic.png" />
+    </div>
     <div class="key-items">
         <div class="key-item">
             <h3>ANNOUNCEMENTS</h3>
@@ -52,38 +52,38 @@
             <div class="ecosystem">
                 <h2 class="app">Status App</h2>
                 <p>Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects and contributors fostering a rich distributed web.</p>
-                <p><a class="app" href="https://github.com/">Learn More</a>
-                <span><a href="https://github.com/" class="hardwallet"><img src="../img/arrow_purple.png" /></a></span></p>
+                <p><a class="app" href="/docs/">Learn More</a>
+                <span><a href="/docs/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
                 <h2 class="incubate">Status Incubate</h2>
                 <p>Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects</p>
-                <p><a class="incubate" href="https://github.com/">Learn more</a>
-                <span><a href="https://github.com/" class="hardwallet"><img src="../img/arrow_purple.png" /></a></span></p>
+                <p><a class="incubate" href="https://status.im/incubate">Learn more</a>
+                <span><a href="https://status.im/incubate"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
                 <h2 class="embark">Embark</h2>
-                <p>Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects and contributors fostering a rich distributed web.</p>
-                <p><a class="embark" href="https://github.com/">Learn more</a>
-                <span><a href="https://github.com/" class="hardwallet"><img src="../img/arrow_purple.png" /></a></span></p>
+                <p>Embark is a fast, simple and powerful framework to help you develop and deploy Decentralized Applications</p>
+                <p><a class="embark" href="https://embark.status.im">Learn more</a>
+                <span><a href="https://embark.status.im"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
                 <h2 class="studio">Status Studio</h2>
-                <p>Engineer</p>
-                <p><a class="studio" href="https://github.com/">Learn more</a>
-                <span><a href="https://github.com/" class="hardwallet"><img src="../img/arrow_purple.png" /></a></span></p>
+                <p>Our collective goal is the mass adoption of Ethereum.</p>
+                <p><a class="studio" href="#">Learn more</a>
+                <span><a href="#"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
                 <h2 class="nimbus">Nimbus</h2>
-                <p>Engineer</p>
-                <p><a class="nimbus" href="https://github.com/">Learn more</a>
-                <span><a href="https://github.com/" class="hardwallet"><img src="../img/arrow_purple.png" /></a></span></p>
+                <p>Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware.</p>
+                <p><a class="nimbus" href="https://nimbus.status.im/">Learn more</a>
+                <span><a href="https://nimbus.status.im/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
             <div class="ecosystem">
                 <h2 class="hardwallet">Status Hardwallet</h2>
-                <p>Engineer</p>
-                <p><a class="hardwallet" href="https://github.com/">Learn more</a>
-                <span><a href="https://github.com/" class="hardwallet"><img src="../img/arrow_purple.png" /></a></span></p>
+                <p>A hardware wallet with a safe, contactless transaction experience. Forget leaving your assets in the vulnerable hands of exchanges or hot wallets online. Isolate your private keys into the safety of your Status Hardwallet offline.</p>
+                <p><a class="hardwallet" href="https://hardwallet.status.im/">Learn more</a>
+                <span><a href="https://hardwallet.status.im/"><img src="../img/arrow_purple.png" /></a></span></p>
             </div>
         </div>
 

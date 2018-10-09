@@ -598,7 +598,6 @@ select[multiple] {
   align-items: center;
   justify-content: center;
   background-color: #EEF2F5;
-  height: 550px;
   flex-direction: column;
   justify-content: flex-start;
   z-index: 3;
@@ -628,7 +627,7 @@ select[multiple] {
 }
 
 .intro-buttons {
-  display: flex;
+  display: -webkit-box;
 }
 
 .intro .button {
@@ -636,6 +635,12 @@ select[multiple] {
   width: 260px;
   padding: 10px 0 8px;
 }
+
+.intro-graphic
+  margin: -120px auto 0 auto
+  img
+    width: 100%
+    z-index: 1
 
 .button.button--main {
   background-color: rgba(255, 255, 255, 1);
@@ -1452,6 +1457,53 @@ footer input[type="email"]{
   background: #eff0f1;
 }
 
+.key-items 
+  margin: 0 auto
+  max-width: 1280px
+  border: 1px solid white
+  border-radius: 16px
+  margin-bottom: 64px
+  margin-top: -20px
+  background: #fff
+
+.key-item
+  float: left
+  width: 33%
+  max-height: 314px
+  border-right: 1px solid #E8EBEC
+  padding: 32px
+  z-index: 99
+  &:last-child
+    border-right: 0
+  h3
+    font-weight: 500;
+    line-height: normal;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px
+    color: #939BA1;
+  h4
+    color: #000
+    font-weight: bold
+    sont-size: 16px
+    line-height: 24px
+    margin-bottom: 8px
+  a
+    color: #4360DF
+    text-decoration: none
+  p
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 16px;
+    color: #939ba1;
+    overflow: hidden;
+    margin-bottom: 80px
+  p:last-child 
+    margin-bottom: 0;
+    margin-top: auto;
+
 @media (max-width: 1199px)
   .backdrop
     z-index: 9998
@@ -1498,18 +1550,24 @@ footer input[type="email"]{
     margin: -30px auto 0 auto;
 
   .intro
-    padding: 50px 16px;
+    padding: 50px 16px
+    width: 90%
+    text-align: left
 
-  .command-wrap {
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
-  }
+  .intro-buttons  
+    display: flex
 
-  .command {
-    border-radius: 0;
-    font-size: 18px;
-  }
+  .intro-graphic
+    margin: -60px auto 0 auto
+
+  .command-wrap
+    width: 100%
+    margin: 0
+    border-radius: 0
+
+  .command
+    border-radius: 0
+    font-size: 18px
 
   #content-inner
     flex-direction: column;
@@ -1538,6 +1596,9 @@ footer input[type="email"]{
     .more
       flex: 0 0 20%;
       max-width: 20%;
+  
+  .key-item
+    width: 100% !important
 
 @media (max-width: 767px)
   .home-cover
@@ -1592,54 +1653,5 @@ footer input[type="email"]{
     .more
       flex: 0 0 100%;
       max-width: 100%;
-  .key-item
-    width: 100%
 
-.key-items 
-  display: flex
-  width: 100%
-  flex-wrap: wrap
-  margin: 0 auto
-  max-width: 1280px
-  border: 1px solid white
-  border-radius: 16px
-  background: #fff
-  margin-bottom: 64px
-
-.key-item
-  float: left
-  width: 33%
-  max-height: 314px
-  border-right: 1px solid #E8EBEC
-  padding: 32px
-  &:last-child
-    border-right: 0
-  h3
-    font-weight: 500;
-    line-height: normal;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 24px
-    color: #939BA1;
-  h4
-    color: #000
-    font-weight: bold
-    sont-size: 16px
-    line-height: 24px
-    margin-bottom: 8px
-  a
-    color: #4360DF
-    text-decoration: none
-  p
-    font-style: normal;
-    font-weight: normal;
-    line-height: 25px;
-    font-size: 16px;
-    color: #939ba1;
-    overflow: hidden;
-    margin-bottom: 80px
-  p:last-child 
-    margin-bottom: 0;
-    margin-top: auto;
 
