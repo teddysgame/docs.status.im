@@ -3,6 +3,13 @@ id: whisper_faqs
 title: Whisper - FAQs
 ---
 # All Your Questions Answered
+**Q. Does Whisper store messages on blockchain?**
+
+**A.** No, messages are sent between peers off-chain.
+
+**Q. How Whisper protocol relates to [Whisper Systems](https://en.wikipedia.org/wiki/Whisper_Systems), [Open Whisper Systems](https://en.wikipedia.org/wiki/Open_Whisper_Systems) (Signal) or [Whisper app](https://en.wikipedia.org/wiki/Whisper_(app))?**
+
+**A.** No relation, except the name choice. The word "whisper" seems to be a decent name for any censorship-fighting technology.
 
 **Q. We would ideally do our off-chain communication using something that is already available to us. There is an added bonus if it uses ÐΞVp2p, since we already need that port opened anyways?**
 
