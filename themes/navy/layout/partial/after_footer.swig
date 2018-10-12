@@ -7,6 +7,7 @@
 {{ js('js/mobile_nav') }}
 {{ js('js/search') }}
 {{ js('js/fetch_blog_posts') }}
+{{ js('js/main') }}
 <!-- endbuild -->
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->

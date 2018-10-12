@@ -52,14 +52,17 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
   var prefix = 'sidebar.' + type + '.';
 
   _.each(sidebar, function(menu, title) {
-    result += '<strong class="' + className + '-title">' + self.__(prefix + title) + '</strong>';
+    result += '<div class="sidebar-submenu"><strong class="' + className + '-title">' + self.__(prefix + title) + '</strong><ul>';
 
     _.each(menu, function(link, text) {
       var itemClass = className + '-link';
       if (link === path) itemClass += ' current';
 
-      result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a>';
+      result += '<li><a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a></li>';
     });
+
+    result += '</ul></div>';
+
   });
 
   return result;
