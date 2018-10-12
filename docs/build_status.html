@@ -34,8 +34,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Status">
-  <meta property="og:image" content="/img/graphic-licensing.png" />
-  <meta property="og:title" content="Nimbus, a Light Client for Ethereum 2.0" />
+  <meta property="og:title" content="Status, a Mobile Client for Ethereum 2.0" />
 </head>
 
 <body>
@@ -50,22 +49,11 @@
         <header class="dropdown">
             <nav>
                 <ul>
-                    <li class="has-submenu">
-                        <a href="#" class="main-link">Status App</a>
-                        <i class="mobile-submenu-trigger"></i>
-                        <div class="sub-menu">
-                            <ul>
-                                <li><a href="https://status.im">About</a></li>
-                                <li><a href="https://status.im">Features</a></li>
-                                <li><a href="https://desktop.status.im">Desktop</a></li>
-                                <li><a href="https://docs.status.im">Docs</a></li>
-                                <li><a href="https://our.status.im">Blog</a></li>
-                                <li><a href="https://people-ops.status.im/">Contribute</a></li>
-                            </ul>
-                        </div>
+                    <li>
+                        <a href="https://status.im" class="main-link">Status Home</a>
                     </li>
                     <li class="has-submenu">
-                        <a href="https://embark.status.im" class="main-link">Embark</a>
+                        <a href="https://embark.status.im/" class="main-link">Embark</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
@@ -76,13 +64,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#">Studio</a></li>
                     <li class="has-submenu"><a href="https://status.im/incubate">Incubate</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="https://status.im/incubate">About</a></li>
-                                <li><a href="https://status.im/incubate">Projects</a></li>
                                 <li><a href="https://status.im/incubate">Projects</a></li>
                                 <li><a href="https://get.status.im/chat/public/status-incubate">Community</a></li>
                                 <li><a href="https://our.status.im/tag/incubate">Blog</a></li>
@@ -94,26 +79,20 @@
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="https://nimbus.status.im/docs/">Docs</a></li>
-                                <li><a href="https://our.status.im/tag/research">Blog</a></li>
-                                <li><a href="https://gitter.im/status-im/nimbus">Contribute</a></li>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/docs/">Docs</a></li>
+                                <li><a href="https://our.status.im/tag/nimbus">Blog</a></li>
+                                <li><a href="http://get.status.im/chat/public/status-nimbus">Talk To Us</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="https://our.status.im/tag/hardwallet">Hardwallet</a></li>
+                    <li><a href="https://hardwallet.status.im/">Hardwallet</a></li>
                     <li class="has-submenu">
                         <a href="https://people-ops.status.im">Peopleops</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="https://our.status.im/our-principles/">Our Principles</a></li>
-                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/working_here.html">Working Here</a></li>
-                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/">Docs</a></li>
-                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/life_status.html">Life at Status</a></li>
-                                <li><a href="https://status.im/open-positions.html">Contribute</a></li>
-                                <li><a href="https://status.im/open-positions.html">Jobs</a></li>
-                                <li><a href="https://status-im.github.io/tag/people-ops">Blog</a></li>
+                                <li><a href="https://our.status.im/tag/people-ops/">Blog</a></li>
                             </ul>
                         </div>
                     </li>
@@ -128,9 +107,9 @@
             </div>
             <input type="search" id="search-input" placeholder="Search...">
         </div>
-        <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Public Chat</a></span>
+        <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Chat</a></span>
         <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
-        <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
+        <span class="social-link social-link--github"><a href="https://github.com/status-im/nimbus" target="_blank"></a></span>
     </div>
     <a href="#" class="mobile-menu-trigger">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -216,14 +195,26 @@
 <p>If <code>nvm</code> is already installed, <code>make setup</code> simply does the following:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nvm install 9</span><br><span class="line">nvm alias status-im 9</span><br><span class="line">nvm use status-im</span><br></pre></td></tr></table></figure></p>
 <h3 id="Custom-Android-SDK-location" class="article-heading"><a href="#Custom-Android-SDK-location" class="headerlink" title="Custom Android SDK location"></a>Custom Android SDK location<a class="article-anchor" href="#Custom-Android-SDK-location" aria-hidden="true"></a></h3><p>Some of developers prefer to use Android SDK integrated to Android Studio. Of course, it doesn’t matter<br>for the build process — just make sure that <code>ANDROID_SDK_ROOT</code> points to a right location and you have all the SDKs installed.</p>
 <h2 id="Troubleshooting" class="article-heading"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting<a class="article-anchor" href="#Troubleshooting" aria-hidden="true"></a></h2><h3 id="I-see-lots-of-yarn-errors-while-installing-Realm-js" class="article-heading"><a href="#I-see-lots-of-yarn-errors-while-installing-Realm-js" class="headerlink" title="I see lots of yarn errors while installing Realm.js!"></a>I see lots of yarn errors while installing Realm.js!<a class="article-anchor" href="#I-see-lots-of-yarn-errors-while-installing-Realm-js" aria-hidden="true"></a></h3><p>Unfortunately, Realm doesn’t support Node.js v10. Which means that you need to use Node &lt; 10 to build Status.<br>One of the best ways to install any older version of Node.js is to use <code>nvm</code>.</p>
+<h3 id="I-have-issues-compiling-on-Xcode-10" class="article-heading"><a href="#I-have-issues-compiling-on-Xcode-10" class="headerlink" title="I have issues compiling on Xcode 10"></a>I have issues compiling on Xcode 10<a class="article-anchor" href="#I-have-issues-compiling-on-Xcode-10" aria-hidden="true"></a></h3><p>Some developers are experiencing errors compiling for iOS on Xcode 10 on MacOs Mojave:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">error: Build input file cannot be found: &apos;status-react/node_modules/react-native/third-party/double-conversion-1.1.6/src/cached-powers.cc&apos;</span><br></pre></td></tr></table></figure>
+<p>To fix similar errors run the following commands:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make clean</span><br><span class="line"></span><br><span class="line">cd ios</span><br><span class="line">pod update</span><br><span class="line">cd ..</span><br><span class="line"></span><br><span class="line">cd node_modules/react-native/scripts &amp;&amp; ./ios-install-third-party.sh &amp;&amp; cd ../../../</span><br><span class="line"></span><br><span class="line">cd node_modules/react-native/third-party/glog-0.3.4/ &amp;&amp; ../../scripts/ios-configure-glog.sh &amp;&amp; cd ../../../../</span><br></pre></td></tr></table></figure>
+<p>Now you should be able to compile again. The issue reference is <a href="ttps://github.com/facebook/react-native/issues/21168#issuecomment-422431294" target="_blank" rel="noopener">here</a>.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-09-27T10:32:06.276Z" itemprop="dateModified">Last updated: 2018-09-27</time>
+                <time class="article-footer-updated" datetime="2018-10-12T11:16:32.302Z" itemprop="dateModified">Last updated: 2018-10-12</time>
                 <a href="FAQs.html" class="article-footer-prev" title="FAQs"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="build_status_go.html" class="article-footer-next" title="Building Status-Go"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
             </div>
           </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-easiest-way"><span class="toc-text">The easiest way</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Clone-the-repository"><span class="toc-text">1. Clone the repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Install-the-dependencies"><span class="toc-text">2. Install the dependencies</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Running-development-processes"><span class="toc-text">Running development processes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Build-process"><span class="toc-text">1. Build process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-React-Native-packager"><span class="toc-text">2. React Native packager</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Build-and-run-the-application-itself"><span class="toc-text">Build and run the application itself</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#iOS-macOS-only"><span class="toc-text">iOS (macOS only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android"><span class="toc-text">Android</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Optional-Advanced-build-notes"><span class="toc-text">Optional: Advanced build notes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js"><span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-Android-SDK-location"><span class="toc-text">Custom Android SDK location</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Troubleshooting"><span class="toc-text">Troubleshooting</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#I-see-lots-of-yarn-errors-while-installing-Realm-js"><span class="toc-text">I see lots of yarn errors while installing Realm.js!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I-have-issues-compiling-on-Xcode-10"><span class="toc-text">I have issues compiling on Xcode 10</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
         </div>
       </article>
     </div>

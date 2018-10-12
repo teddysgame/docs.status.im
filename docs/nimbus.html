@@ -34,8 +34,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Status">
-  <meta property="og:image" content="/img/graphic-licensing.png" />
-  <meta property="og:title" content="Nimbus, a Light Client for Ethereum 2.0" />
+  <meta property="og:title" content="Status, a Mobile Client for Ethereum 2.0" />
 </head>
 
 <body>
@@ -50,22 +49,11 @@
         <header class="dropdown">
             <nav>
                 <ul>
-                    <li class="has-submenu">
-                        <a href="#" class="main-link">Status App</a>
-                        <i class="mobile-submenu-trigger"></i>
-                        <div class="sub-menu">
-                            <ul>
-                                <li><a href="https://status.im">About</a></li>
-                                <li><a href="https://status.im">Features</a></li>
-                                <li><a href="https://desktop.status.im">Desktop</a></li>
-                                <li><a href="https://docs.status.im">Docs</a></li>
-                                <li><a href="https://our.status.im">Blog</a></li>
-                                <li><a href="https://people-ops.status.im/">Contribute</a></li>
-                            </ul>
-                        </div>
+                    <li>
+                        <a href="https://status.im" class="main-link">Status Home</a>
                     </li>
                     <li class="has-submenu">
-                        <a href="https://embark.status.im" class="main-link">Embark</a>
+                        <a href="https://embark.status.im/" class="main-link">Embark</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
@@ -76,13 +64,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#">Studio</a></li>
                     <li class="has-submenu"><a href="https://status.im/incubate">Incubate</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="https://status.im/incubate">About</a></li>
-                                <li><a href="https://status.im/incubate">Projects</a></li>
                                 <li><a href="https://status.im/incubate">Projects</a></li>
                                 <li><a href="https://get.status.im/chat/public/status-incubate">Community</a></li>
                                 <li><a href="https://our.status.im/tag/incubate">Blog</a></li>
@@ -94,26 +79,20 @@
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="https://nimbus.status.im/docs/">Docs</a></li>
-                                <li><a href="https://our.status.im/tag/research">Blog</a></li>
-                                <li><a href="https://gitter.im/status-im/nimbus">Contribute</a></li>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/docs/">Docs</a></li>
+                                <li><a href="https://our.status.im/tag/nimbus">Blog</a></li>
+                                <li><a href="http://get.status.im/chat/public/status-nimbus">Talk To Us</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="https://our.status.im/tag/hardwallet">Hardwallet</a></li>
+                    <li><a href="https://hardwallet.status.im/">Hardwallet</a></li>
                     <li class="has-submenu">
                         <a href="https://people-ops.status.im">Peopleops</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="https://our.status.im/our-principles/">Our Principles</a></li>
-                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/working_here.html">Working Here</a></li>
-                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/">Docs</a></li>
-                                <li><a href="https://status-im.github.io/people-ops.status.im/docs/life_status.html">Life at Status</a></li>
-                                <li><a href="https://status.im/open-positions.html">Contribute</a></li>
-                                <li><a href="https://status.im/open-positions.html">Jobs</a></li>
-                                <li><a href="https://status-im.github.io/tag/people-ops">Blog</a></li>
+                                <li><a href="https://our.status.im/tag/people-ops/">Blog</a></li>
                             </ul>
                         </div>
                     </li>
@@ -128,9 +107,9 @@
             </div>
             <input type="search" id="search-input" placeholder="Search...">
         </div>
-        <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Public Chat</a></span>
+        <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Chat</a></span>
         <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
-        <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
+        <span class="social-link social-link--github"><a href="https://github.com/status-im/nimbus" target="_blank"></a></span>
     </div>
     <a href="#" class="mobile-menu-trigger">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -350,6 +329,13 @@
               </footer>
             </div>
           </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#An-Ethereum-2-0-Sharding-Client"><span class="toc-text">An Ethereum 2.0 Sharding Client</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OVERVIEW"><span class="toc-text">OVERVIEW</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GOALS"><span class="toc-text">GOALS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REQUIREMENTS"><span class="toc-text">REQUIREMENTS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-on-Embedded-Systems"><span class="toc-text">Development on Embedded Systems</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Extensible-Configurable-and-Modular-Design"><span class="toc-text">Extensible, Configurable, and Modular Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commitment-to-Ethereum-Improvement-Proposals-EIP"><span class="toc-text">Commitment to Ethereum Improvement Proposals (EIP)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#User-Experience"><span class="toc-text">User Experience</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Licensing-MIT-Apache-v2-0"><span class="toc-text">Licensing: MIT, Apache v2.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Biweekly-Development-Reports-Technical-Writing-and-Promotion"><span class="toc-text">Biweekly Development Reports, Technical Writing, and Promotion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bounty-Based-Development"><span class="toc-text">Bounty-Based Development</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TEAM"><span class="toc-text">TEAM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Alex-Mandel"><span class="toc-text">Alex Mandel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Eugene-Kabanov"><span class="toc-text">Eugene Kabanov</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jacek-Sieka"><span class="toc-text">Jacek Sieka</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mamy-Ratsimbazafy"><span class="toc-text">Mamy Ratsimbazafy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ryan-Lipscombe"><span class="toc-text">Ryan Lipscombe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Yuriy-Glukhov"><span class="toc-text">Yuriy Glukhov</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zahary-Karadjov"><span class="toc-text">Zahary Karadjov</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MILESTONES"><span class="toc-text">MILESTONES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Formation-of-the-Team-and-Detailed-Project-Implementation-Timeline"><span class="toc-text">Formation of the Team, and Detailed Project Implementation Timeline</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#January-February-2018"><span class="toc-text">January - February 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Completed"><span class="toc-text">Completed:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compatibility-with-Ethereum-1-0"><span class="toc-text">Compatibility with Ethereum 1.0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#January-November-2018"><span class="toc-text">January - November 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-1"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sharding-Phase-1"><span class="toc-text">Sharding Phase 1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#July-November-2018"><span class="toc-text">July - November 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goal"><span class="toc-text">Goal:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Auditing-of-Beta-and-Security"><span class="toc-text">Auditing of Beta and Security</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#November-2018-March-2019"><span class="toc-text">November 2018 - March 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goal-1"><span class="toc-text">Goal:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation-of-Whisper-and-PSS"><span class="toc-text">Implementation of Whisper and PSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#July-November-2018-1"><span class="toc-text">July - November 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-2"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Support-for-LES"><span class="toc-text">Support for LES</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#July-November-2018-2"><span class="toc-text">July - November 2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-3"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sharding-Phase-2"><span class="toc-text">Sharding Phase 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#November-2018-July-2019"><span class="toc-text">November 2018 - July 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-4"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Casper-Implementation"><span class="toc-text">Casper Implementation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#December-2018-February-2019"><span class="toc-text">December 2018 - February 2019</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation-of-Swarm"><span class="toc-text">Implementation of Swarm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#January-July-2019"><span class="toc-text">January - July 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-5"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sharding-Phase-3"><span class="toc-text">Sharding Phase 3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#March-August-2019"><span class="toc-text">March - August 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-6"><span class="toc-text">Goals:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ongoing-Improvements-in-Sharding"><span class="toc-text">Ongoing Improvements in Sharding</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#August-December-2019"><span class="toc-text">August - December 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-7"><span class="toc-text">Goals:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ETYMOLOGY"><span class="toc-text">ETYMOLOGY</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ideas-Considered-for-Implementation"><span class="toc-text">Ideas Considered for Implementation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Resources"><span class="toc-text">Resources</span></a>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
         </div>
       </article>
     </div>

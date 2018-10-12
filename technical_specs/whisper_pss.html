@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Whisper - Comparison with the Postal Service over Swarm (PSS) | Status</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://dev-docs.status.im/technical_specs/whisper_pss.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://dev-docs.status.im/technical_specs/whisper_pss.html">
+    
+  
+  <!-- Icon -->
+  <meta name="msapplication-TileColor" content="#ff9c00">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <link rel="icon" type="image/png" href="/img/logo-16.png?v=0.0.5" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/img/logo-32.png?v=0.0.5" sizes="32x32" />
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76.png?v=0.0.5">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120.png?v=0.0.5">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152.png?v=0.0.5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180.png?v=0.0.5">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon-1024.png?v=0.0.5">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Status">
+  <meta property="og:title" content="Status, a Mobile Client for Ethereum 2.0" />
+</head>
+
+<body>
+  <div id="container">
+    
+      <div class="header">
+    <div class="header-left">
+        <div class="logo-wrap">
+            <span class="logo-span"><a class="logo" href="/"></a></span>
+            <span class="logo-span"><a class="logo-text" href="/">status</a></span>
+        </div>
+        <header class="dropdown">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://status.im" class="main-link">Status Home</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="https://embark.status.im/" class="main-link">Embark</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://embark.status.im">About</a></li>
+                                <li><a href="https://embark.status.im/docs">Docs</a></li>
+                                <li><a href="https://our.status.im/tag/embark">Blog</a></li>
+                                <li><a href="https://gitter.im/embark-framework/Lobby">Contribute</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-submenu"><a href="https://status.im/incubate">Incubate</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://status.im/incubate">Projects</a></li>
+                                <li><a href="https://get.status.im/chat/public/status-incubate">Community</a></li>
+                                <li><a href="https://our.status.im/tag/incubate">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="https://nimbus.status.im" class="main-link">Nimbus</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/docs/">Docs</a></li>
+                                <li><a href="https://our.status.im/tag/nimbus">Blog</a></li>
+                                <li><a href="http://get.status.im/chat/public/status-nimbus">Talk To Us</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="https://hardwallet.status.im/">Hardwallet</a></li>
+                    <li class="has-submenu">
+                        <a href="https://people-ops.status.im">Peopleops</a>
+                        <i class="mobile-submenu-trigger"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="https://our.status.im/tag/people-ops/">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="secondary-nav">
+        <div id="search-input-wrap">
+            <div id="search-input-icon">
+                <i class="fa fa-search"></i>
+            </div>
+            <input type="search" id="search-input" placeholder="Search...">
+        </div>
+        <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Chat</a></span>
+        <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
+        <span class="social-link social-link--github"><a href="https://github.com/status-im/nimbus" target="_blank"></a></span>
+    </div>
+    <a href="#" class="mobile-menu-trigger">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 7C4 6.44727 4.44775 6 5 6H19C19.5522 6 20 6.44727 20 7C20 7.28516 19.8811 7.54102 19.6903 7.72266C19.5109 7.89453 19.2677 8 19 8H5C4.44775 8 4 7.55273 4 7ZM4 17C4 16.4473 4.44775 16 5 16H19C19.1147 16 19.2251 16.0195 19.3278 16.0547C19.463 16.1016 19.5851 16.1777 19.687 16.2734C19.8798 16.4551 20 16.7129 20 17C20 17.5527 19.5522 18 19 18H5C4.44775 18 4 17.5527 4 17ZM5 11C4.44775 11 4 11.4473 4 12C4 12.5527 4.44775 13 5 13H15C15.3312 13 15.6249 12.8398 15.8068 12.5918C15.9282 12.4258 16 12.2207 16 12C16 11.6387 15.8087 11.3223 15.5221 11.1465C15.3701 11.0527 15.1913 11 15 11H5Z" fill="black"/>
+        </svg>
+    </a>
+</div>
+    
+    <div class="page-intro wrapper">
+  <header class="article-header">
+    <h1 class="article-title" itemprop="name">Whisper - Comparison with the Postal Service over Swarm (PSS)</h1>
+    <a href="https://github.com/status-im/docs.status.im/edit/develop/source/technical_specs/whisper_pss.md" class="article-edit-link" title="Improve this doc">Edit on Github</a>
+  </header>
+</div>
+<div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Whisper</strong><a href="index.html" class="sidebar-link">Do You Want To Know A Secret?</a><a href="extended_features.html" class="sidebar-link">Extended Features</a><a href="dark_routing.html" class="sidebar-link">Dark Routing</a><a href="whisper_pss.html" class="sidebar-link current">Comparison with PSS</a><a href="whisper_faqs.html" class="sidebar-link">Whisper FAQs</a>
+  </div>
+</aside>
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <div class="article-content" itemprop="articleBody">
+                <h1 id="Overview" class="article-heading"><a href="#Overview" class="headerlink" title="Overview"></a>Overview<a class="article-anchor" href="#Overview" aria-hidden="true"></a></h1><p><em>Whisper and PSS are two messaging procotols currently being developed in the Ethereum stack - here’s a side-by-side comparison that can help guide your choice between them.</em></p>
+<h2 id="Similarities" class="article-heading"><a href="#Similarities" class="headerlink" title="Similarities"></a>Similarities<a class="article-anchor" href="#Similarities" aria-hidden="true"></a></h2><ul>
+<li>Online-first protocols - no built-in offline capability / expectation</li>
+<li>Symmetric and asymmetric encryption available</li>
+<li>4-byte topic acts as hint for decryption</li>
+<li>Recipient anonymity: ability to decrypt makes you a recipient<ul>
+<li>Bloom filters and addressing limit anonymity</li>
+</ul>
+</li>
+<li>Sender anonymity: peers generally can’t tell if neighbour peer is message originator<ul>
+<li>Being fully surrounded breaks this</li>
+<li>Light clients that don’t repeat traffic will leave more obvious metadata trail</li>
+</ul>
+</li>
+<li>When used without bloom filters or without addressing, routing is equivalent for Whisper and PSS respectively</li>
+</ul>
+<h2 id="Differences" class="article-heading"><a href="#Differences" class="headerlink" title="Differences"></a>Differences<a class="article-anchor" href="#Differences" aria-hidden="true"></a></h2><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Whisper</th>
+<th>PSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Routing</td>
+<td><a href="#Gossip">Gossip</a></td>
+<td><a href="#Kademlia">Kademlia</a></td>
+</tr>
+<tr>
+<td>DoS protection</td>
+<td><a href="Proof-of-work">Proof of work</a></td>
+<td><a href="#Swap-incentives">Swap incentives</a></td>
+</tr>
+<tr>
+<td>Bandwidth  vs darkness</td>
+<td><a href="#Bloom-filtering">Topic-based bloom filters</a> - intermediary / recipient decides</td>
+<td><a href="Partial-addressing">Partial addressing</a> - sender decides</td>
+</tr>
+<tr>
+<td>Encryption in API</td>
+<td>Mandatory</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Key exchange</td>
+<td>N/A</td>
+<td>Optional Diffie-Hellman</td>
+</tr>
+<tr>
+<td>Message lifetime</td>
+<td><a href="#Time-to-live">Time-to-live</a> (sender decides)</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Whisper" class="article-heading"><a href="#Whisper" class="headerlink" title="Whisper"></a>Whisper<a class="article-anchor" href="#Whisper" aria-hidden="true"></a></h1><p>Whisper is a gossip-based combination of a messaging protocol and ephemeral key-value store</p>
+<h2 id="Gossip" class="article-heading"><a href="#Gossip" class="headerlink" title="Gossip"></a>Gossip<a class="article-anchor" href="#Gossip" aria-hidden="true"></a></h2><ul>
+<li>Connected peers form a “random” subset of all nodes in network</li>
+<li>Each message is sent to all connected peers</li>
+<li>Each time a message is sent to a peer, it’s also added to a seen list for that peer</li>
+<li>Multiple peers will send you the same message - only propagated to those that don’t have it on the seen list</li>
+<li>Scalability issues:<ul>
+<li>each node sees each message multiple times</li>
+<li>too many restricted nodes will cause low propagation probability</li>
+<li>see <a href="https://hackmd.io/B-W4T1SzSgCAbYS2CfoIPg" target="_blank" rel="noopener">https://hackmd.io/B-W4T1SzSgCAbYS2CfoIPg</a> for further analysis</li>
+</ul>
+</li>
+</ul>
+<p>Example propagation:</p>
+<h2 id="Proof-of-work" class="article-heading"><a href="#Proof-of-work" class="headerlink" title="Proof of work"></a>Proof of work<a class="article-anchor" href="#Proof-of-work" aria-hidden="true"></a></h2><ul>
+<li>PoW calculated over <code>expiry, ttl, topic, data, nonce</code> meaning that you need both a timestamp and contents of message to create the PoW</li>
+<li><code>pow = (2^BestBit) / (size * TTL)</code> meaning that large messages or those with long TTL are penalized</li>
+<li>Tricky for heterogenous devices</li>
+</ul>
+<h2 id="Bloom-filtering" class="article-heading"><a href="#Bloom-filtering" class="headerlink" title="Bloom filtering"></a>Bloom filtering<a class="article-anchor" href="#Bloom-filtering" aria-hidden="true"></a></h2><ul>
+<li>Topics are compressed to a bloom filter that is sent to directly connected peers</li>
+<li>Peers only forward messages to you that match filter<ul>
+<li>Violators are disconnected</li>
+</ul>
+</li>
+<li>Recipient decides how “dark” it wants to be by revealing a more or less accurate bloom filter</li>
+<li>Aggressive bloom filtering can cause network partitioning, makes nodes less valuable in network</li>
+<li>Nodes repeat messages to peers in order to achive sender metadata safety<ul>
+<li>Works as long as you’re not surrounded by coordinated malicious peers</li>
+<li>Bloom filters limit efficiency</li>
+</ul>
+</li>
+</ul>
+<h2 id="Key-exchange" class="article-heading"><a href="#Key-exchange" class="headerlink" title="Key exchange"></a>Key exchange<a class="article-anchor" href="#Key-exchange" aria-hidden="true"></a></h2><ul>
+<li>Must be done out-of-band</li>
+</ul>
+<h2 id="Time-to-live" class="article-heading"><a href="#Time-to-live" class="headerlink" title="Time to live"></a>Time to live<a class="article-anchor" href="#Time-to-live" aria-hidden="true"></a></h2><ul>
+<li>Sender decides on a time-to-live for messages, and pays PoW for it</li>
+<li>Messages are kept/cached in every node until their TTL expires</li>
+<li>If a new node connects, it will receive all messages whose TTL has not yet expired</li>
+<li>Together with topics and capability to decrypt, this can be seen as an ephemeral key-value store of sorts</li>
+</ul>
+<h1 id="PSS" class="article-heading"><a href="#PSS" class="headerlink" title="PSS"></a>PSS<a class="article-anchor" href="#PSS" aria-hidden="true"></a></h1><p>PSS wraps whisper and adds the swarm routing protocol to add deteministic routing.</p>
+<p><a href="https://swarm-guide.readthedocs.io/en/latest/pss.html" target="_blank" rel="noopener">https://swarm-guide.readthedocs.io/en/latest/pss.html</a><br><a href="https://swarm-guide.readthedocs.io/en/latest/resources.html" target="_blank" rel="noopener">https://swarm-guide.readthedocs.io/en/latest/resources.html</a></p>
+<h2 id="Kademlia" class="article-heading"><a href="#Kademlia" class="headerlink" title="Kademlia"></a>Kademlia<a class="article-anchor" href="#Kademlia" aria-hidden="true"></a></h2><ul>
+<li>Overlay networked addressed by ethereum public key hash</li>
+<li>Kademlia defines a measure of distance between arbirary nodes</li>
+<li>You connect to a subset of all nodes based on these distances so as to reach a good balance between connectivity and distance</li>
+<li>Each hop gets you closer to final destination, similar to a binary search</li>
+</ul>
+<h2 id="Swap-incentives" class="article-heading"><a href="#Swap-incentives" class="headerlink" title="Swap incentives"></a>Swap incentives<a class="article-anchor" href="#Swap-incentives" aria-hidden="true"></a></h2><ul>
+<li>TODO - not implemented</li>
+</ul>
+<h2 id="Partial-addressing" class="article-heading"><a href="#Partial-addressing" class="headerlink" title="Partial addressing"></a>Partial addressing<a class="article-anchor" href="#Partial-addressing" aria-hidden="true"></a></h2><ul>
+<li>Place in kademlia overlay determined by ethereum key</li>
+<li>by specifying part of key, we can narrow down the number of hosts that “could” be recipients of message and route towards them - the neighbourhood</li>
+<li>Gossip the remaining bit, among neighbourhood peers</li>
+<li>Path through network depends on source address</li>
+</ul>
+<h2 id="Key-exchange-1" class="article-heading"><a href="#Key-exchange-1" class="headerlink" title="Key exchange"></a>Key exchange<a class="article-anchor" href="#Key-exchange-1" aria-hidden="true"></a></h2><ul>
+<li>Rudimentary ephemeral diffie hellman exchange part of the API</li>
+</ul>
+<h1 id="Other-resources" class="article-heading"><a href="#Other-resources" class="headerlink" title="Other resources"></a>Other resources<a class="article-anchor" href="#Other-resources" aria-hidden="true"></a></h1><h2 id="Code" class="article-heading"><a href="#Code" class="headerlink" title="Code"></a>Code<a class="article-anchor" href="#Code" aria-hidden="true"></a></h2><ul>
+<li><a href="https://github.com/paritytech/parity-ethereum/tree/master/whisper" target="_blank" rel="noopener">parity/whisper</a></li>
+<li><a href="https://github.com/ethersphere/go-ethereum/tree/master/whisper" target="_blank" rel="noopener">go-ethereum/whisper</a></li>
+<li><a href="https://github.com/ethersphere/go-ethereum/tree/master/swarm/pss" target="_blank" rel="noopener">go-ethereum/PSS</a></li>
+</ul>
+<h2 id="Random-links" class="article-heading"><a href="#Random-links" class="headerlink" title="Random links"></a>Random links<a class="article-anchor" href="#Random-links" aria-hidden="true"></a></h2><ul>
+<li><a href="https://ethereum.stackexchange.com/questions/47109/when-should-i-use-whisper-or-pss-over-traditional-message-channel-like-aws-sqs" target="_blank" rel="noopener">When whisper/PSS instead of traditional messaging</a></li>
+<li><a href="https://gist.github.com/zelig/d52dab6a4509125f842bbd0dce1e9440" target="_blank" rel="noopener">initial pss description</a></li>
+<li><a href="https://github.com/nolash/ethereum-samples/tree/master/p2p/devp2p" target="_blank" rel="noopener">go-ethereum p2p samples</a></li>
+</ul>
+<h1 id="Appendix-Examples" class="article-heading"><a href="#Appendix-Examples" class="headerlink" title="Appendix: Examples"></a>Appendix: Examples<a class="article-anchor" href="#Appendix-Examples" aria-hidden="true"></a></h1><h2 id="Whisper-message-propagation" class="article-heading"><a href="#Whisper-message-propagation" class="headerlink" title="Whisper message propagation"></a>Whisper message propagation<a class="article-anchor" href="#Whisper-message-propagation" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph nodes &#123;</span><br><span class="line">  00 -- 01; 00 -- 10 ; 10 -- 11; 01 -- 11; </span><br><span class="line">  01 -- 10;</span><br><span class="line">  &#123;rank=same; 00 01&#125; &#123;rank=same; 10 11&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">digraph step1 &#123;</span><br><span class="line">  00 -&gt; 01; 00 -&gt; 10;</span><br><span class="line">  &#123;rank=same; 00 01&#125; &#123;rank=same; 10 11&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">digraph step2 &#123;</span><br><span class="line">  00; 01 -&gt; 10; 10 -&gt; 11; 01 -&gt; 11; 10 -&gt; 01;</span><br><span class="line">  &#123;rank=same; 00 01&#125; &#123;rank=same; 10 11&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Notice how <code>10</code>, <code>01</code> potentially receive message twice (depending on timing) and <code>11</code> is guaranteed to recieve twice (in this setup, due to locally limited knowledge in <code>01</code>, <code>10</code> nodes)</p>
+<h2 id="PSS-message-propagation" class="article-heading"><a href="#PSS-message-propagation" class="headerlink" title="PSS message propagation"></a>PSS message propagation<a class="article-anchor" href="#PSS-message-propagation" aria-hidden="true"></a></h2><p>Example propagation to address <code>1*</code>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph nodes &#123;</span><br><span class="line">  00 -- 01; 00 -- 10 ; 10 -- 11; 01 -- 11; </span><br><span class="line">  01 -- 10;</span><br><span class="line">  &#123;rank=same; 00 01&#125; &#123;rank=same; 10 11&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">digraph step1 &#123;</span><br><span class="line">  00 -&gt; 10;</span><br><span class="line">  &#123;rank=same; 00 01&#125; &#123;rank=same; 10 11&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">digraph step1 &#123;</span><br><span class="line">  00; 10 -&gt; 11; </span><br><span class="line">  &#123;rank=same; 00 01&#125; &#123;rank=same; 10 11&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Either of <code>10</code>, <code>11</code> could be recipient, message reaches both!</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-10-12T11:16:32.302Z" itemprop="dateModified">Last updated: 2018-10-12</time>
+                <a href="dark_routing.html" class="article-footer-prev" title="Dark Routing"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="whisper_faqs.html" class="article-footer-next" title="Whisper FAQs"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Overview"><span class="toc-text">Overview</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Similarities"><span class="toc-text">Similarities</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Differences"><span class="toc-text">Differences</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Whisper"><span class="toc-text">Whisper</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gossip"><span class="toc-text">Gossip</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proof-of-work"><span class="toc-text">Proof of work</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bloom-filtering"><span class="toc-text">Bloom filtering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-exchange"><span class="toc-text">Key exchange</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Time-to-live"><span class="toc-text">Time to live</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PSS"><span class="toc-text">PSS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kademlia"><span class="toc-text">Kademlia</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swap-incentives"><span class="toc-text">Swap incentives</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Partial-addressing"><span class="toc-text">Partial addressing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-exchange-1"><span class="toc-text">Key exchange</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Other-resources"><span class="toc-text">Other resources</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-text">Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Random-links"><span class="toc-text">Random links</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Appendix-Examples"><span class="toc-text">Appendix: Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Whisper-message-propagation"><span class="toc-text">Whisper message propagation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PSS-message-propagation"><span class="toc-text">PSS message propagation</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="info">
+            <div class="blog-logo">
+                <a href="https://status.im/" ><img src="../img/logo-footer.svg" alt="Status"><span>status</span></a>
+            </div>
+            <p>Status Holdings Pte. Ltd. <br>6 Ubi Road Singapore </p>
+        </div>
+        <div class="social-links">
+            <h3>Social links</h3>
+            <ul class="community">
+                <li><a href="https://www.facebook.com/ethstatus" target="_blank" class="footer-facebook">Facebook</a></li>
+                <li><a href="https://twitter.com/ethstatus" target="_blank" class="footer-twitter">Twitter</a></li>
+                <li><a href="https://chat.status.im/#/register" target="_blank" class="footer-riot">Riot</a></li>
+                <li><a href="https://github.com/status-im" target="_blank" class="footer-github">GitHub</a></li>
+                <li><a href="https://www.reddit.com/r/statusim/" target="_blank" class="footer-reddit">Reddit</a></li>
+                <li><a href="https://www.youtube.com/statusim" target="_blank" class="footer-youtube">YouTube</a></li>
+            </ul>
+        </div>
+        <div class="more">
+            <h3>More </h3>
+            <ul>
+                <li><a href="/docs/">Status Docs</a></li>
+                <li><a href="https://our.status.im/">Our Status</a></li>
+                <li><a href="https://status.im/open-positions.html">Jobs</a></li>
+                <li><a href="https://status.im/incubate">Incubate</a></li>
+                <li><a href="https://status.im/projects">Projects</a></li>
+                <li><a href="https://status.im/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+    </div>
+    </div>
+</footer>
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <div class="backdrop"></div>
+<div class="mobile-menu-container">
+  <div class="mobile-menu-container-inner">
+    <div class="mobile-menu-header">
+      <div class="logo-wrap">
+          <span class="logo-span"><a class="logo" href="/"></a></span>
+          <span class="logo-span"><a class="logo-text" href="/">status</a></span>
+      </div>
+      <a href="#" class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.574L7.72275 6.2968C7.32616 5.90021 6.68994 5.90241 6.29617 6.29617C5.89966 6.69269 5.90269 7.32864 6.2968 7.72275L10.574 12L6.2968 16.2772C5.90021 16.6738 5.90241 17.3101 6.29617 17.7038C6.69269 18.1003 7.32864 18.0973 7.72275 17.7032L12 13.426L16.2772 17.7032C16.6738 18.0998 17.3101 18.0976 17.7038 17.7038C18.1003 17.3073 18.0973 16.6714 17.7032 16.2772L13.426 12L17.7032 7.72275C18.0998 7.32616 18.0976 6.68994 17.7038 6.29617C17.3073 5.89966 16.6714 5.90269 16.2772 6.2968L12 10.574Z" fill="black"/>
+        </svg>
+      </a>
+    </div>
+    <div class="ecosystem">
+      <span class="title">Ecosystem</span>
+    </div>
+    <div class="community">
+      <span class="title">Community</span>
+    </div>
+  </div>
+  <div class="mobile-submenu-container-inner">
+    <div class="mobile-menu-header">
+      <a href="#" class="back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00687 12.1016C7.02704 12.3261 7.1228 12.5448 7.29281 12.7143L14.3042 19.7079C14.6926 20.0953 15.3188 20.0988 15.7089 19.7097C16.0963 19.3232 16.0907 18.6911 15.7072 18.3085L9.38119 11.9986L15.7072 5.68865C16.0956 5.30126 16.099 4.67664 15.7089 4.28751C15.3215 3.90107 14.6877 3.9067 14.3042 4.28924L7.29281 11.2828C7.06819 11.5069 6.97231 11.8103 7.00687 12.1016Z" fill="black"/>
+        </svg>
+      </a>
+      <span class="title">Status app</span>
+      <a href="#" class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.574L7.72275 6.2968C7.32616 5.90021 6.68994 5.90241 6.29617 6.29617C5.89966 6.69269 5.90269 7.32864 6.2968 7.72275L10.574 12L6.2968 16.2772C5.90021 16.6738 5.90241 17.3101 6.29617 17.7038C6.69269 18.1003 7.32864 18.0973 7.72275 17.7032L12 13.426L16.2772 17.7032C16.6738 18.0998 17.3101 18.0976 17.7038 17.7038C18.1003 17.3073 18.0973 16.6714 17.7032 16.2772L13.426 12L17.7032 7.72275C18.0998 7.32616 18.0976 6.68994 17.7038 6.29617C17.3073 5.89966 16.6714 5.90269 16.2772 6.2968L12 10.574Z" fill="black"/>
+        </svg>
+      </a>
+    </div>
+    <div class="dropdown">
+      <nav></nav>
+    </div>
+  </div>
+</div>
+  <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/bundle.js?v=0.0.1"></script>
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/fetch_blog_posts.js"></script>
+<!-- endbuild -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script async src="/js/highlight.pack.js"></script>
+<script async src="/js/solidity.js"></script>
+<script>
+
+function highlight() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+}
+
+$(document).ready(function() {
+  try {
+    highlight();
+  } catch(err) {
+    console.log("retrying...")
+    setTimeout(function() {
+      highlight();
+    }, 2500)
+  }
+
+  var clipboard = new ClipboardJS(".btn");
+  clipboard.on('success', function(e) {
+    var id = $(e.trigger).attr("data-clipboard-target");
+    $(id).toggleClass("flash");
+    setTimeout(function() {
+      $(id).toggleClass("flash");
+    }, 200);
+    e.clearSelection();
+  })
+});
+
+</script>
+<style>
+  mark {
+    background: #232323;
+    color: white;
+    font-weight: bold;
+
+    -webkit-transition: background 0.1s ease-in-out;
+    -ms-transition:     background 0.1s ease-in-out;
+    transition:         background 0.1s ease-in-out;
+  }
+
+  .clippy {
+    margin-top: -3px;
+    position: relative;
+    top: 3px;
+  }
+
+  pre {
+    position: relative;
+  }
+
+  .btn {
+    transition: opacity .3s ease-in-out;
+    padding: 2px 6px;
+    position: absolute;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc,#eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-appearance: none;
+    top: 34px;
+    right: 12px;
+  }
+
+  .flash {
+    background-color: grey;
+  }
+
+</style>
+<!-- Algolia -->
+
+
+</body>
+</html>
